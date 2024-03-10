@@ -14,7 +14,7 @@ class CreateMasterClassesTable extends Migration
     public function up()
     {
         Schema::create('master_classes', function (Blueprint $table) {
-            $table->string('id');
+            $table->string('id')->primary();
             $table->string('name');
             $table->timestamps();
         });
