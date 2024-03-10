@@ -9,4 +9,9 @@ class MasterKelas extends Model
 {
     use HasFactory;
     protected $keyType = 'string';
+    protected $fillable = 
+    [
+        'nama_kelas', 
+        'id',
+    ];
 }
