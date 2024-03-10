@@ -14,8 +14,9 @@ class CreateIndividualPhotosTable extends Migration
     public function up()
     {
         Schema::create('individual_photos', function (Blueprint $table) {
-            $table->id();
+            $table->string('id');
             $table->string('photo');
+            $table->string('nama_siswa');
             $table->string('kelas_id');
             $table->timestamps();
         });
