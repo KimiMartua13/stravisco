@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMasterKelasTable extends Migration
+class CreatePhotoGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateMasterKelasTable extends Migration
      */
     public function up()
     {
-        Schema::create('master_kelas', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('nama_kelas');
+        Schema::create('photo_groups', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('class_id');
+            $table->string('photo');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateMasterKelasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('master_kelas');
+        Schema::dropIfExists('photo_groups');
     }
 }

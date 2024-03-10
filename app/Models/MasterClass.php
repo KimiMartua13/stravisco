@@ -5,13 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MasterKelas extends Model
+class MasterClass extends Model
 {
     use HasFactory;
-    protected $keyType = 'string';
-    protected $fillable = 
-    [
-        'nama_kelas', 
-        'id',
-    ];
 }
