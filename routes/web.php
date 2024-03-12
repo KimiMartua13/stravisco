@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::get('/reduce-image/{jurusan}', function ( $jurusan ) {
     $imagePath = glob('C:/photo/Foto Stravisco/' . $jurusan . '/*');
     dd($imagePath);
