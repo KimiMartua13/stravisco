@@ -18,9 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/reduce-image', function () {
-    $imagePath = glob('C:/photo/The Boys/*');
-
+Route::get('/reduce-image/{jurusan}', function ( $jurusan ) {
+    $imagePath = glob('C:/photo/Foto Stravisco/' . $jurusan . '/*');
+    dd($imagePath);
+    
     foreach( $imagePath as $image ){
         $filePhoto = pathinfo($image);
         if ( array_key_exists('extension',  $filePhoto) ) {
@@ -31,4 +32,30 @@ Route::get('/reduce-image', function () {
     }
 
     return 'Image resized successfully!';
+});
+
+Route::get('/uploadFoto/{jurusan}', function( $jurusan ) {
+    $paths = glob('C:/photo/Foto Stravisco/' . $jurusan . '/*');
+    
+    foreach ($paths as $path) {
+        $newPaths = glob($path . '/*');
+        foreach ($newPaths as $newPath) {
+            $pathInfo = pathinfo($newPath);
+            if ( array_key_exists('extension', $pathInfo) ) {
+                // dump('ditemukan foto bareng');
+                // dump($pathInfo);
+                // Image::load($)
+                // ->optimize()
+                // ->save('C:\\photo\\The Boys\\Reduce\\' . $filePhoto['basename']);
+            }else{
+                $veryNewPaths = glob($newPath . '/*');
+                foreach ($veryNewPaths as $veryNewPath) {
+                    $newPathInfo = pathinfo($veryNewPath);
+                    dump('ditemukan foto individu');
+                    dump($newPathInfo);
+                }
+                
+            }
+        }
+    }
 });
