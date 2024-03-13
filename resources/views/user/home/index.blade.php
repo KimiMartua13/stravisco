@@ -1,36 +1,16 @@
-@extends('layouts.main')
+@extends('/user/main')
 
 @section('stravisco-moment')
     <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/img/moment1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
+                <img src="/img/moment1.jpg" class="d-block w-100" alt="Moment 1">
             </div>
             <div class="carousel-item">
-                <img src="/img/moment2.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
+                <img src="/img/moment2.jpg" class="d-block w-100" alt="Moment 2">
             </div>
             <div class="carousel-item">
-                <img src="/img/moment3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
+                <img src="/img/moment3.jpg" class="d-block w-100" alt="Moment 3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -44,7 +24,21 @@
     </div>
 @endsection
 
+@section('stravisco-definition')
+    <div class="card stravisco-wrapper">
+        <div class="card-body text-definition text-white">
+            <h5>Stravisco</h5>
+            <p>Pembebasan, dalam konteks yang lebih luas, mencakup memberikan ruang dan kesempatan bagi anak muda untuk
+                menguatkan ide, gagasan, dan kreativitas positif mereka tanpa harus kehilangan identitas atau jati diri
+                mereka. Ini melibatkan pengembangan lingkungan yang mendukung di mana mereka merasa aman untuk
+                mengekspresikan diri mereka tanpa takut akan penilaian atau pembatasan eksternal yang membatasi pertumbuhan
+                mereka.</p>
+        </div>
+    </div>
+@endsection
+
 @section('stravisco-jurusan')
+    <h1 class="text-center">Jurusan</h1>
     <div class="row text-center jurusan-1">
         <div class="col-md-4">
             <a href="/">
