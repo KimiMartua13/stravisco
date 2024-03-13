@@ -6,11 +6,7 @@ use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
-    return view('home');
+    return view('/user/home/index');
 });
 
 Route::get('/reduce-image/{jurusan}', function ( $jurusan ) {

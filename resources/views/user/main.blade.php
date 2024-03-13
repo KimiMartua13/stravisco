@@ -16,8 +16,11 @@
 <body>
     @include('partials.navbar')
     <section id="stravisco-moment">
-        <div class="container-fluid">
             @yield('stravisco-moment')
+    </section>
+    <section id="stravisco-definition">
+        <div class="card-stravisco card-definition">
+            @yield('stravisco-definition')
         </div>
     </section>
     <section id="stravisco-jurusan">
