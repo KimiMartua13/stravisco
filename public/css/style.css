@@ -63,7 +63,7 @@ a {
     margin: auto 30px;
     max-width: 1200px;
     width: 100%;
-    background-color: #00b6c5;
+    background-color: #212529;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
     border-radius: 50px 12px 50px 12px;
     -webkit-border-radius: 50px 12px 50px 12px;
@@ -74,7 +74,7 @@ a {
 
 /* Animation */
 .jurusan-1 h1:hover {
-    color: #00b6c5;
+    color: #424747;
 }
 @media screen and (max-width: 1024px) {
     .card-stravisco {
@@ -99,7 +99,7 @@ a {
 
 @media screen and (max-width: 575px) {
     .card-stravisco {
-        font-size: 12px;
+        font-size: 10px;
         top: 350px;
     }
     .carousel-item img {
