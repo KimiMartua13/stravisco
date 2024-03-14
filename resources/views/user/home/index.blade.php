@@ -38,7 +38,11 @@
 @endsection
 
 @section('stravisco-jurusan')
+<<<<<<< HEAD
     <h1 class="text-center" style="margin-top: 150px">Jurusan</h1>
+=======
+    <h1 class="text-center m-0 mb-5">Jurusan</h1>
+>>>>>>> fd7468d32a3e8afc8e77f40ef359236e5309de60
     <div class="row text-center jurusan-1">
         <div class="col-md-4">
             <a href="/">
