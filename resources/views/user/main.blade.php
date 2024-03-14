@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    @include('partials.navbar')
+    @include('user/partials/navbar')
     <section id="stravisco-moment">
             @yield('stravisco-moment')
     </section>

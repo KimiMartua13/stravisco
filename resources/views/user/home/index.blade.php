@@ -27,7 +27,7 @@
 @section('stravisco-definition')
     <div class="card stravisco-wrapper">
         <div class="card-body text-definition text-white">
-            <h5>Stravisco</h5>
+            <h4>Stravisco</h4>
             <p>Pembebasan, dalam konteks yang lebih luas, mencakup memberikan ruang dan kesempatan bagi anak muda untuk
                 menguatkan ide, gagasan, dan kreativitas positif mereka tanpa harus kehilangan identitas atau jati diri
                 mereka. Ini melibatkan pengembangan lingkungan yang mendukung di mana mereka merasa aman untuk
@@ -38,7 +38,7 @@
 @endsection
 
 @section('stravisco-jurusan')
-    <h1 class="text-center">Jurusan</h1>
+    <h1 class="text-center" style="margin-top: 150px">Jurusan</h1>
     <div class="row text-center jurusan-1">
         <div class="col-md-4">
             <a href="/">

@@ -15,8 +15,8 @@ a {
 .carousel-item img {
     background-position: 100%;
     background-position-y: 80%;
-    background-size: contain;
-    height: 700px;
+    /* background-size: contain; */
+    /* height: 700px; */
 }
 
 .bg-newblue {
@@ -32,7 +32,7 @@ a {
 }
 
 .jurusan-1 h1 {
-    font-size: 20px;
+    font-size: 16px;
     color: #000;
     transition: color 0.2s ease;
     -webkit-transition: color 0.2s ease;
@@ -76,17 +76,54 @@ a {
 .jurusan-1 h1:hover {
     color: #00b6c5;
 }
-@media screen and (max-width: 1024px) {
+
+
+/* Flex */
+@media screen and (max-width: 1440px) {
     .card-stravisco {
-        font-size: 12px;
-        top: 500px;
+        font-size: 18px;
+        top: 700px;
     }
     .carousel-item img {
-        height: 500px;
+        height: 700px;
         background-size :auto;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .card-stravisco {
+        font-size: 12px;
+        top: 600px;
+    }
+    .carousel-item img {
+        height: 600px;
+        background-size :auto;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .card-stravisco {
+        font-size: 12px;
+        top: 400px;
+    }
+    .carousel-item img {
+        height: 400px;
+        background-size :auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-stravisco {
+        font-size: 11px;
+        top: 350px;
+    }
+    .carousel-item img {
+        height: 350px;
+        background-size :auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
     .card-stravisco {
         font-size: 12px;
         top: 300px;
@@ -97,52 +134,16 @@ a {
     }
 }
 
-@media screen and (max-width: 575px) {
-    .card-stravisco {
-        font-size: 12px;
-        top: 350px;
-    }
-    .carousel-item img {
-        height: 350px;
-        background-size :auto;
-    }
-}
-
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 375px) {
     #stravisco-moment {
         margin-bottom: 200px;
     }
     .card-stravisco {
         font-size: 10px;
+        top: 250px;
+    }
+    .carousel-item img {
+        height: 250px;
+        background-size :auto;
     }
 }
-
-/* @media screen and (min-width: 660px) {
-    .stravisco-wrapper {
-        font-size: 100px;
-        top: 50px;
-    }
-} */
-
-/* Flex */
-
-/* @media screen and (max-width: 780px) {
-    .stravisco-wrapper {
-        font-size: 15px;
-        top: -350px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .stravisco-wrapper {
-        font-size: 10px;
-        top: -530px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .stravisco-wrapper {
-        font-size: 10px;
-        top: -580px;
-    }
-}  */
