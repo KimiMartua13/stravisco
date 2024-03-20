@@ -38,26 +38,22 @@
 @endsection
 
 @section('stravisco-jurusan')
-<<<<<<< HEAD
     <h1 class="text-center" style="margin-top: 150px">Jurusan</h1>
-=======
-    <h1 class="text-center m-0 mb-5">Jurusan</h1>
->>>>>>> fd7468d32a3e8afc8e77f40ef359236e5309de60
     <div class="row text-center jurusan-1">
         <div class="col-md-4">
-            <a href="/">
+            <a href="/jurusan/rpl">
                 <img src="/img/rpl_logo.png" alt="Rekayasa Perangkat Lunak">
                 <h1>Rekayasa Perangkat <br> Lunak</h1>
             </a>
         </div>
         <div class="col-md-4">
-            <a href="">
+            <a href="/jurusan/tkj">
                 <img src="/img/tkj_logo.png" alt="Teknik Komputer dan Jaringan">
                 <h1>Teknik Komputer <br> dan Jaringan</h1>
             </a>
         </div>
         <div class="col-md-4">
-            <a href="">
+            <a href="/jurusan/tei">
                 <img src="/img/tei_logo.png" alt="Teknik Elektronika Industri">
                 <h1>Teknik Elektronika <br> Industri</h1>
             </a>
@@ -65,18 +61,18 @@
     </div>
     <div class="row jurusan-1 mt-5">
         <div class="col-md-4">
-            <a href="">
+            <a href="/jurusan/tbsm">
                 <img src="/img/tsm_logo.png" alt="Teknik dan Bisnis Sepeda Motor">
                 <h1>Teknik dan Bisnis <br> Sepeda Motor</h1>
             </a>
         </div>
         <div class="col-md-4">
-            <a href=""><img src="/img/ak_logo.png" alt="Akuntansi dan Keuangan Lembaga">
+            <a href="/jurusan/ak"><img src="/img/ak_logo.png" alt="Akuntansi dan Keuangan Lembaga">
                 <h1>Akuntansi dan <br> Keuangan Lembaga</h1>
             </a>
         </div>
         <div class="col-md-4">
-            <a href="">
+            <a href="/jurusan/tet">
                 <img src="/img/tet_logo.png" alt="Teknik Energi Terbarukan">
                 <h1>Teknik Energi <br> Terbarukan</h1>
             </a>
