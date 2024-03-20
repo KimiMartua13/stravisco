@@ -15,8 +15,6 @@ a {
 .carousel-item img {
     background-position: 100%;
     background-position-y: 80%;
-    /* background-size: contain; */
-    /* height: 700px; */
 }
 
 .bg-newblue {
@@ -82,11 +80,10 @@ a {
 @media screen and (max-width: 1440px) {
     .card-stravisco {
         font-size: 18px;
-        top: 700px;
+        top: 720px;
     }
     .carousel-item img {
         height: 700px;
-        background-size :auto;
     }
 }
 
