@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Login</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Register</title>
 
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -39,11 +37,20 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2 mb-2">
-                    <h5 class="card-title text-center pb-0 fs-4 text-dark">Masuk Akun Anda</h5>
+                    <h5 class="card-title text-center pb-0 fs-4 text-dark">Register Akun</h5>
                   </div>
 
-                  <form class="row g-3 needs-validation" method="POST" action="/login/aksiLogin">
+                  <form class="row g-3 needs-validation" method="POST" action="/register/aksiRegister">
                     @csrf
+
+                    <div class="col-12">
+                        <label for="yourName" class="form-label">Nama</label>
+                        <div class="input-group has-validation">
+                          <input type="text" name="name" class="form-control" id="yourName" required>
+                          <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                    </div>
+
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
@@ -59,7 +66,13 @@
                     </div>
 
                     <div class="col-12">
-                      <button class="btn btn-dark w-100" type="submit">Login</button>
+                        <label for="yourConfirmationPassword" class="form-label">Password Confirmation</label>
+                        <input type="password" name="password_confirmation" class="form-control" id="yourConfirmationPassword" required>
+                        <div class="invalid-feedback">Please enter your password!</div>
+                      </div>
+
+                    <div class="col-12">
+                      <button class="btn btn-dark w-100" type="submit">Register</button>
                     </div>
                   </form>
 
