@@ -11,8 +11,10 @@ class AdminController extends Controller
 {
     public function index( Request $request )
     {
-        dd(Auth::user());
-        return view('admin/home/index');
+        // dd(Auth::user());
+        return view('admin/home/index', [
+            'title' => 'Dashboard'
+        ]);
     }
 
     public function aksiTampilFoto( Request $request ) 
@@ -28,7 +30,7 @@ class AdminController extends Controller
     public function aksiLoginAplikasi( Request $request ) 
     {
         $validatedData = $request->validate([
-            'username' => 'required',
+            'username' => 'required|min:8',
             'password' => 'required',
         ]);
 
@@ -38,7 +40,7 @@ class AdminController extends Controller
             return redirect()->intended('dashboard');
         }
 
-        return back();
+        return back()->withErrors('msg',$validatedData);
     }
 
     public function aksiRegisterUser( Request $request ) 

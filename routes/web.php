@@ -33,6 +33,36 @@ Route::prefix('register')->group(function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Route::get('/reduce-image/{jurusan}', function ( $jurusan ) {
 //     $imagePath = glob('C:/photo/Foto Stravisco/' . $jurusan . '/*');
 //     dd($imagePath);

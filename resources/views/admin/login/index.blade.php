@@ -42,6 +42,14 @@
                     <h5 class="card-title text-center pb-0 fs-4 text-dark">Masuk Akun Anda</h5>
                   </div>
 
+                  <div class="mb-2">
+                    @if ($errors->any())
+                    <div class="alert alert-danger" role="alert">
+                      Username Atau Password Salah !!
+                    </div>
+                    @endif
+                  </div>
+
                   <form class="row g-3 needs-validation" method="POST" action="/login/aksiLogin">
                     @csrf
                     <div class="col-12">

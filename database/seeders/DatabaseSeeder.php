@@ -117,14 +117,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Teknik Energi Terbarukan 2',
         ]);
 
-        MasterClass::create([
-            'id' => '01.04.03.',
-            'name' => 'Teknik Energi Terbarukan 3',
-        ]);
-
-
-
-
+        
 
         // Teknik Dan Bisnis Sepeda Motor
         MasterClass::create([
