@@ -4,14 +4,17 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Image\Image;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\UserController;
 
 
 Route::get('/', function () {
     return view('/user/home/index');
 });
 
+Route::get('/landing-baru', [UserController::class, 'index']);
+
 Route::prefix('jurusan')->group(function () {
-   Route::get('/{jurusan}', [JurusanController::class, 'index']); 
+    Route::get('/{jurusan}', [JurusanController::class, 'index']); 
 });
 
 Route::prefix('dashboard')->group( function(){

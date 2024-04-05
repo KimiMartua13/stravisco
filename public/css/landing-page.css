@@ -1,0 +1,251 @@
+/* @font-face {
+    font-family: 'Roboto';
+    src: url(/public/fonts/Roboto/Roboto-Regular.ttf);
+} */
+
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif !important;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.navbar {
+    position: relative;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    padding: 2rem 0;
+}
+
+.section-padding-100 {
+    padding: 100px 0;
+}
+
+.stravisco-area .stravisco-title h2 {
+    font-size: 56px;
+    text-align: center;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.single-content-item {
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.stravisco-item h2 {
+    font-size: 70px;
+    color: #ddd8d8;
+}
+
+.stravisco-weare {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.section-padding-0-100 {
+    padding: 0 0 100px;
+}
+
+.stravisco-weare .stravisco-backend h2 {
+    position: absolute;
+    font-size: 230px;
+    color: #f0f0f0;
+    z-index: -1;
+    /* top: -30px;
+    left: -3%; */
+    text-align: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.we-are {
+    text-align: center;
+}
+
+.we-are h2 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.stravisco-footer .copyright {
+    text-align: center;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 910px) {
+    .stravisco-item h2 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .stravisco-area .stravisco-title h2 {
+        font-size: 43px;
+    }
+    .stravisco-item h2 {
+        position: absolute;
+        z-index: -10;
+    }
+    .stravisco-item .stravisco-text h2 {
+        left: 10px;
+        top: -47px;
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .stravisco-area .stravisco-title h2 {
+        font-size: 34px;
+    }
+    .stravisco-item .stravisco-text h2 {
+        left: 10px;
+        top: -40px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        padding: 30px 60px;
+        background: transparent !important;
+        border-bottom: 1px dashed rgba(256, 256, 256, 0.2);
+        z-index: 9;
+    }
+
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #000 !important;
+    }
+
+    .navbar .navbar-brand {
+        color: #ffffff;
+    }
+
+    .navbar.nav-sticky .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link:focus {
+        padding: 10px 10px 8px 10px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .navbar-light.nav-sticky .navbar-nav .nav-link,
+    .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
+        color: #fff;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #fff;
+    }
+
+    .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+    .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+        color: #fff;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 15px;
+        background: #000 !important;
+    }
+
+    .navbar .navbar-brand {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .navbar .navbar-toggler {
+        background-color: #fff;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link:focus {
+        padding: 10px 10px 8px 10px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+/* .single-stravisco-item .backend-content h2 {
+    font-size: ;
+} */
+
+/* .single-stravisco-item.stravisco-item-1 .backend-content h2 {
+    right: auto;
+    left: 40%;
+} */
+
+/* .stravisco-area .liberation h2::after {
+    content: "";
+    position: absolute;
+    background-color: #ddd8d8;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.stravisco-area .liberation h2:hover {
+    color: #c0baba;
+}
+
+.stravisco-area .liberation h2:hover::after {
+    color: #c0baba;
+    width: 100%;
+} */
+
+@media only screen and (max-width: 767px) {
+}

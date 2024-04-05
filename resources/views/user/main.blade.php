@@ -15,19 +15,8 @@
 
 <body>
     @include('user/partials/navbar')
-    <section id="stravisco-moment">
-            @yield('stravisco-moment')
-    </section>
-    <section id="stravisco-definition">
-        <div class="card-stravisco card-definition">
-            @yield('stravisco-definition')
-        </div>
-    </section>
-    <section id="stravisco-jurusan">
-        <div class="container">
-            @yield('stravisco-jurusan')
-        </div>
-    </section>
+
+    @yield('main')
 
     <script src="/js/bootstrap.min.js"></script>
 </body>

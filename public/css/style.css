@@ -21,15 +21,15 @@ a {
     background-color: #00b6c5;
 }
 
-.jurusan-1 {
+.jurusan-1, .jurusan-2 {
     text-align: center;
 }
 
-.jurusan-1 img {
+.jurusan-1 img, .jurusan-2 img {
     width: 150px;
 }
 
-.jurusan-1 h1 {
+.jurusan-1 h1, .jurusan-2 h1 {
     font-size: 16px;
     color: #000;
     transition: color 0.2s ease;
@@ -37,6 +37,14 @@ a {
     -moz-transition: color 0.2s ease;
     -ms-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
+}
+
+.jurusan-2 {
+    margin-top: 2.5rem;
+}
+
+.stravisco-jurusan {
+    margin-bottom: 5rem;
 }
 
 .card-stravisco {
@@ -106,6 +114,9 @@ a {
     .carousel-item img {
         height: 400px;
         background-size :auto;
+    }
+    .jurusan-2 {
+        margin-top: 0;
     }
 }
 
