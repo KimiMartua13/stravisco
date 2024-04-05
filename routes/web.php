@@ -29,6 +29,41 @@ Route::prefix('login')->group(function () {
     Route::post('/aksiLogin', [AdminController::class, 'aksiLoginAplikasi']);
 });
 
+Route::prefix('register')->group(function(){
+    Route::get('/', [AdminController::class, 'aksiTampilRegister']);
+    Route::post('/aksiRegister', [AdminController::class, 'aksiRegisterUser']);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Route::get('/reduce-image/{jurusan}', function ( $jurusan ) {

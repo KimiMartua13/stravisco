@@ -4,12 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class AdminController extends Controller
 {
     public function index( Request $request )
     {
-        return view('admin/home/index');
+        // dd(Auth::user());
+        return view('admin/home/index', [
+            'title' => 'Dashboard'
+        ]);
     }
 
     public function aksiTampilFoto( Request $request ) 
@@ -24,6 +29,41 @@ class AdminController extends Controller
 
     public function aksiLoginAplikasi( Request $request ) 
     {
-        dd('test');
+        $validatedData = $request->validate([
+            'username' => 'required|min:8',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt($validatedData)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('dashboard');
+        }
+
+        return back()->withErrors('msg',$validatedData);
+    }
+
+    public function aksiRegisterUser( Request $request ) 
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'username' => 'required',
+            'password' => 'min:6|required_with:password_confirmation|same:password_confirmation',
+            'password_confirmation' => 'min:6',
+        ]);
+
+        User::create([
+            'name' => $validatedData['name'],
+            'username' => $validatedData['username'],
+            'password' => bcrypt( $validatedData['password'] ),
+        ]);
+
+        return redirect('/login');
+
+    }
+
+    public function aksiTampilRegister( Request $request ) 
+    {
+        return view('admin/register/index');
     }
 }
