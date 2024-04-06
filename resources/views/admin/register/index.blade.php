@@ -40,7 +40,7 @@
                     <h5 class="card-title text-center pb-0 fs-4 text-dark">Register Akun</h5>
                   </div>
 
-                  <form class="row g-3 needs-validation" method="POST" action="/register/aksiRegister">
+                  <form class="row g-3 needs-validation" method="POST" action="/dashboard/register/aksiRegister">
                     @csrf
 
                     <div class="col-12">
