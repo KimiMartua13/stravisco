@@ -1,4 +1,4 @@
-*,
+/* *,
 body,
 html {
     font-family: "Poppins", sans-serif !important;
@@ -78,13 +78,13 @@ a {
     -o-border-radius: 50px 12px 50px 12px;
 }
 
-/* Animation */
+Animation
 .jurusan-1 h1:hover {
     color: #424747;
 }
 
 
-/* Flex */
+Flex
 @media screen and (max-width: 1440px) {
     .card-stravisco {
         font-size: 18px;
@@ -154,4 +154,4 @@ a {
         height: 250px;
         background-size :auto;
     }
-}
+} */

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Image\Image;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\ClassController;
 use App\Http\Controllers\UserController;
 
 
@@ -12,9 +13,11 @@ Route::get('/', function () {
 });
 
 Route::get('/landing-baru', [UserController::class, 'index']);
+Route::get('/jurusan', [JurusanController::class, 'index']);
+// Route::get('/jurusan/{jurusan}', [ClassController::class, 'index']);
 
 Route::prefix('jurusan')->group(function () {
-    Route::get('/{jurusan}', [JurusanController::class, 'index']); 
+    Route::get('/{jurusan}', [JurusanController::class, 'jurusanWithName']); 
 });
 
 Route::prefix('dashboard')->group( function(){

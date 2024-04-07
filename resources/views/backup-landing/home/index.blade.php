@@ -17,7 +17,7 @@
             <div class="row mt-80 single-content-item stravisco-item">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-1">
-                        <img src="/img/DSC01090.jpg" alt="">
+                        <img src="/img/DSC01090.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -34,14 +34,14 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-2">
-                        <img src="/img/DSC01125.jpg" alt="">
+                        <img src="/img/DSC01125.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
             <div class="row mt-80 single-content-item stravisco-item">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-3">
-                        <img src="/img/DSC01137.jpg" alt="">
+                        <img src="/img/DSC01137.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-2">
-                        <img src="/img/DSC01142.jpg" alt="">
+                        <img src="/img/DSC01142.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
