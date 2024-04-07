@@ -18,7 +18,7 @@ class CreateMasterStudentsTable extends Migration
             $table->string('student_name');
             $table->string('quotes');
             $table->string('photo');
-            $table->foreignId('class_id');
+            $table->string('class_id');
             $table->timestamps();
         });
     }

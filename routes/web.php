@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\IndividuPhotoController;
 
 
 Route::get('/', function () {
@@ -20,22 +21,27 @@ Route::prefix('jurusan')->group(function () {
     Route::get('/{jurusan}', [JurusanController::class, 'jurusanWithName']); 
 });
 
-Route::prefix('dashboard')->group( function(){
+Route::prefix('dashboard')->middleware('auth')->group( function(){
     Route::get('/', [AdminController::class, 'index']);
     Route::prefix('photo')->group(function () {
         Route::get('/', [AdminController::class, 'aksiTampilFoto']);
     });
+
+    Route::prefix('register')->group(function(){
+        Route::get('/', [AdminController::class, 'aksiTampilRegister']);
+        Route::post('/aksiRegister', [AdminController::class, 'aksiRegisterUser']);
+    });
+
 });
 
-Route::prefix('login')->group(function () {
-    Route::get('/', [AdminController::class, 'aksiTampilLogin']);
+Route::get('/masukanfoto/{jurusan}/{kelas}', [IndividuPhotoController::class, 'aksiMasukanFotoIndividu']);
+
+Route::prefix('login')->middleware('guest')->group(function () {
+    Route::get('/', [AdminController::class, 'aksiTampilLogin'])->name('login');
     Route::post('/aksiLogin', [AdminController::class, 'aksiLoginAplikasi']);
 });
 
-Route::prefix('register')->group(function(){
-    Route::get('/', [AdminController::class, 'aksiTampilRegister']);
-    Route::post('/aksiRegister', [AdminController::class, 'aksiRegisterUser']);
-});
+
 
 
 
@@ -70,8 +76,8 @@ Route::prefix('register')->group(function(){
 
 
 // Route::get('/reduce-image/{jurusan}', function ( $jurusan ) {
-//     $imagePath = glob('C:/photo/Foto Stravisco/' . $jurusan . '/*');
-//     dd($imagePath);
+    // $imagePath = glob('C:/photo/Foto Stravisco/' . $jurusan . '/*');
+    // dd($imagePath);
     
 //     foreach( $imagePath as $image ){
 //         $filePhoto = pathinfo($image);

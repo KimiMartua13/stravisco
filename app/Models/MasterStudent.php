@@ -9,7 +9,7 @@ class MasterStudent extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
+        'student_name',
         'quotes',
         'photo',
         'class_id',
