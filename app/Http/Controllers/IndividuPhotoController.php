@@ -35,4 +35,31 @@ class IndividuPhotoController extends Controller
             MasterStudent::create($upload);
         }
     }
+
+    public function aksiMasukanFotoSekelas( Request $request ) 
+    {
+        $pathJurusan = glob('D:/Kimi Martua/Photo Yearbook/*');
+        foreach ($pathJurusan as $key) {
+            $pathKelas = glob( $key . '/*' );
+
+            // Untuk Agar Maksimal Foto Sekelas 5 Saja
+            
+            // $selectedPhoto = [];
+            // foreach ($pathKelas as $keyKelas) {
+            //     $pathSekelas = glob( $keyKelas . '/sekelas/*' );
+            //     $totalItems = count($pathSekelas);
+    
+            //     if( $totalItems <= 5 ){
+            //         $selectedPhoto[] = $pathSekelas;
+            //     }else{
+            //         $randomKeys = array_rand($pathSekelas, 5);
+            //         $selectedItems = [];
+            //         foreach ($randomKeys as $key) {
+            //             $selectedItems[] = $pathSekelas[$key];
+            //         }
+            //         $selectedPhoto[] = $selectedItems;
+            //     }
+            // }
+        }
+    }
 }

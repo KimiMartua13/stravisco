@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\MasterClass;
 use Illuminate\Support\Facades\Crypt;
+use App\Models\MasterStudent;
 
 class JurusanController extends Controller
 {
@@ -34,6 +35,10 @@ class JurusanController extends Controller
 
     public function aksiAmbilKelas( Request $request , $jurusan , $kelas ) 
     {
-        dd(decrypt($kelas));
+        $id_kelas = decrypt($kelas);
+        $student = MasterStudent::where('class_id', $id_kelas)->get();
+
+        // return view('backup-landing.perkelas');
+        // bikin dap disini
     }
 }
