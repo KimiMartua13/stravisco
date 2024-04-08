@@ -23,10 +23,10 @@ class Controller extends BaseController
             $id_jurusan = '01.03.';
         }else if( $jurusan == 'tet'){
             $id_jurusan = '01.04.';
-        }else if( $jurusan == 'tbsm' ){
+        }else if( $jurusan == 'tsm' ){
             $id_jurusan = '01.05.';
         }else if( $jurusan == 'tkj'){
-            $id_jurusan = '01.07.';
+            $id_jurusan = '01.06.';
         }else{
             $id_jurusan = null;
         }

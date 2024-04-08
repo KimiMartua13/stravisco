@@ -84,5 +84,24 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="jurusan-title mt-80">
+                        <h1 class="text-center">Jurusan</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center stravisco-jurusan-item ">
+                @foreach ($jurusan as $item)
+                <div class="col-lg-4 mb-4">
+                    <a href="/jurusan/{{ $item->getSingkatanNamaJurusan() }}">
+                        <img src="/img/{{$item->getSingkatanNamaJurusan()}}-logo.png" class="img-fluid mb-2" alt="{{ $item->name }}">
+                        <h1>{{ $item->name }}</h1>
+                    </a>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 @endsection

@@ -46,7 +46,7 @@
             </div>
             <div class="row stravisco-kelas-item justify-content-center">
                 <div class="col-lg-6">
-                    <a href="/jurusan/01-01-01">
+                    <a href="/jurusan/01.01.01">
                         <img src="/img/DSC01090.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
                         <h1>Rekayasa Perangkat <br> Lunak 1</h1>
                     </a>
@@ -72,6 +72,18 @@
                     </a>
                 </div>
             </div>
+
+            <div class="row stravisco-kelas-item justify-content-center">
+                @foreach ($kumpulanKelas as $item)
+                <div class="col-lg-6" style="margin-bottom: 20px;">
+                    <a href="/jurusan/{{ $item->getSingkatanNamaJurusan() }}/{{ $item->enkripsiId() }}">
+                        <img src="/img/DSC01090.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
+                        <h1>{{ $item->name }}</h1>
+                    </a>
+                </div>
+                @endforeach
+            </div>
+
         </div>
     </div>
 @endsection

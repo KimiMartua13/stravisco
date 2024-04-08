@@ -18,7 +18,10 @@ Route::get('/jurusan', [JurusanController::class, 'index']);
 // Route::get('/jurusan/{jurusan}', [ClassController::class, 'index']);
 
 Route::prefix('jurusan')->group(function () {
-    Route::get('/{jurusan}', [JurusanController::class, 'jurusanWithName']); 
+    Route::prefix('{jurusan}')->group(function () {
+        Route::get('/', [JurusanController::class, 'jurusanWithName']);
+        Route::get('/{kelas}', [JurusanController::class, 'aksiAmbilKelas']);
+    });
 });
 
 Route::prefix('dashboard')->middleware('auth')->group( function(){
