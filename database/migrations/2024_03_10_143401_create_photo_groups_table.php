@@ -15,8 +15,9 @@ class CreatePhotoGroupsTable extends Migration
     {
         Schema::create('photo_groups', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('class_id');
+            $table->string('class_id');
             $table->string('photo');
+            $table->string('type_foto');
             $table->timestamps();
         });
     }

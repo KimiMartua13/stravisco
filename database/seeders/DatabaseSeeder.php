@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\MasterClass;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'name' => 'Administrator',
+            'username' => 'admin12345',
+            'password' => password_hash('admin12345', PASSWORD_DEFAULT),
+        ]);
+
         MasterClass::create([
             'id' => '01.',
             'name' => 'SMKN 2 Kota Bekasi',

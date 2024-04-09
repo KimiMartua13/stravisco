@@ -11,5 +11,6 @@ class PhotoGroup extends Model
     protected $fillable = [
         'class_id',
         'photo',
+        'type_foto',
     ];
 }

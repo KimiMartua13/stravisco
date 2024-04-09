@@ -38,7 +38,7 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
 });
 
 Route::get('/masukanfoto/{jurusan}/{kelas}', [IndividuPhotoController::class, 'aksiMasukanFotoIndividu']);
-Route::get('/masukanfoto/sekelas/', [IndividuPhotoController::class, 'aksiMasukanFotoSekelas']);
+Route::get('masukanfoto/', [IndividuPhotoController::class, 'aksiMasukanFoto']);
 
 Route::prefix('login')->middleware('guest')->group(function () {
     Route::get('/', [AdminController::class, 'aksiTampilLogin'])->name('login');

@@ -6,14 +6,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\PhotoGroup;
+use App\Models\MasterClass;
+use App\Models\MasterStudent;
 
 class AdminController extends Controller
 {
     public function index( Request $request )
     {
         // dd(Auth::user());
+        $group = PhotoGroup::count();
+        $student = MasterStudent::count();
+
+        $dataPhoto = $group + $student;
+
         return view('admin/home/index', [
-            'title' => 'Dashboard'
+            'title' => 'Dashboard',
+            'dataFoto' => $dataPhoto,
         ]);
     }
 
