@@ -191,6 +191,32 @@ a {
     margin-top: 10px;
 }
 
+.stravisco-singlekelas-item {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.stravisco-singlekelas-item .col-lg-3 {
+    margin-top: 40px;
+}
+
+.stravisco-singlekelas-item img {
+    width: 100%;
+}
+
+.stravisco-singlekelas-item h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+}
+
+.stravisco-singlekelas-item p {
+    font-size: 15px;
+    font-style: italic;
+    text-decoration: underline;
+    color: #000;
+}
 
 /* Animation */
 .stravisco-jurusan-item h1:hover {

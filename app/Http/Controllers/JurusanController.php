@@ -16,7 +16,7 @@ class JurusanController extends Controller
         $jurusan = MasterClass::where('id',$idJurusan)->first();
         $kumpulanKelas = MasterClass::where('id', 'like',  $idJurusan . '__.')->get();
         
-        return view('backup-landing.kelas.kelas', [
+        return view('user.kelas.kelas', [
             'jurusan' => $jurusan->name,
             'kumpulanKelas' => $kumpulanKelas,
         ]);
@@ -28,7 +28,7 @@ class JurusanController extends Controller
         ->where('id', 'NOT LIKE', '__.__.__')
         ->get();
 
-        return view('backup-landing.jurusan.jurusan', [
+        return view('user.jurusan.jurusan', [
             'jurusan' => $jurusan,
         ]);
     }
@@ -38,7 +38,8 @@ class JurusanController extends Controller
         $id_kelas = decrypt($kelas);
         $student = MasterStudent::where('class_id', $id_kelas)->get();
 
-        // return view('backup-landing.perkelas');
+        return view('user.kelas.singlekelas');
         // bikin dap disini
+        // dd($student);
     }
 }

@@ -8,12 +8,7 @@ use App\Http\Controllers\ClassController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\IndividuPhotoController;
 
-
-Route::get('/', function () {
-    return view('/user/home/index');
-});
-
-Route::get('/landing-baru', [UserController::class, 'index']);
+Route::get('/', [UserController::class, 'index']);
 Route::get('/jurusan', [JurusanController::class, 'index']);
 // Route::get('/jurusan/{jurusan}', [ClassController::class, 'index']);
 
