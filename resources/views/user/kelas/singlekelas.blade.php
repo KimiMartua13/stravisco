@@ -55,41 +55,35 @@
                 </div>
                 @endforeach --}}
                 <div class="col-lg-3">
-                    <a href="/kelas/">
-                        <img src="/img/adam.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
-                        <h1>Adam Aulia Rachman</h1>
-                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing."</p>
-                    </a>
+                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
+                    <h1>Adam Aulia Rachman</h1>
+                    <p>"Lorem ipsum dolor sit, amet consectetur adipisicing."</p>
                 </div>
                 <div class="col-lg-3">
-                    <a href="/kelas/">
-                        <img src="/img/adam.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
-                        <h1>Adam Aulia Rachman</h1>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
-                    </a>
+                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
+                    <h1>Adam Aulia Rachman</h1>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
                 </div>
                 <div class="col-lg-3">
-                    <a href="/kelas/">
-                        <img src="/img/adam.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
-                        <h1>Adam Aulia Rachman</h1>
-                        <p>"Lorem ipsum dolor sit amet consectetur."</p>
-                    </a>
+                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
+                    <h1>Adam Aulia Rachman</h1>
+                    <p>"Lorem ipsum dolor sit amet consectetur."</p>
                 </div>
                 <div class="col-lg-3">
-                    <a href="/kelas/">
-                        <img src="/img/adam.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
-                        <h1>Adam Aulia Rachman</h1>
-                        <p>"Lorem ipsum dolor sit amet."</p>
-                    </a>
+                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
+                    <h1>Adam Aulia Rachman</h1>
+                    <p>"Lorem ipsum dolor sit amet."</p>
                 </div>
                 <div class="col-lg-3">
-                    <a href="/kelas/">
-                        <img src="/img/adam.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
-                        <h1>Adam Aulia Rachman</h1>
-                        <p>"Lorem ipsum dolor sit amet."</p>
-                    </a>
+                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
+                    <h1>Adam Aulia Rachman</h1>
+                    <p>"Lorem ipsum dolor sit amet."</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="gambarModal">
+        <span class="tutup">&times;</span>
+        <img class="modal-content" id="imgModal">
     </div>
 @endsection

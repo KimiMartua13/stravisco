@@ -5,22 +5,16 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/img/gedung-tei.jpg" class="d-block w-100" alt="Gedung jurusan">
+                    <img src="/img/DSC01090.jpg" class="d-block w-100" alt="Thumbnail kelas">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/gedung-tkj.jpg" class="d-block w-100" alt="Gedung jurusan">
+                    <img src="/img/DSC01125.jpg" class="d-block w-100" alt="Thumbnail kelas">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/gedung-tsm.jpg" class="d-block w-100" alt="Gedung jurusan">
+                    <img src="/img/DSC01137.jpg" class="d-block w-100" alt="Thumbnail kelas">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/gedung-ak.jpg" class="d-block w-100" alt="Gedung jurusan">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/gedung-rpl.jpg" class="d-block w-100" alt="Gedung jurusan">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/gedung-tet.jpg" class="d-block w-100" alt="Gedung jurusan">
+                    <img src="/img/DSC01142.jpg" class="d-block w-100" alt="Thumbnail kelas">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -48,8 +42,8 @@
             <div class="row stravisco-kelas-item justify-content-center">
                 @foreach ($kumpulanKelas as $item)
                 <div class="col-lg-6" style="margin-bottom: 20px;">
+                    <img src="/img/DSC01090.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
                     <a href="/jurusan/{{ $item->getSingkatanNamaJurusan() }}/{{ $item->enkripsiId() }}">
-                        <img src="/img/DSC01090.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
                         <h1>{{ $item->name }}</h1>
                     </a>
                 </div>
@@ -57,5 +51,9 @@
             </div>
 
         </div>
+    </div>
+    <div id="gambarModal">
+        <span class="tutup">&times;</span>
+        <img class="modal-content" id="imgModal">
     </div>
 @endsection

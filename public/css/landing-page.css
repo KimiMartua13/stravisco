@@ -183,6 +183,12 @@ a {
 
 .stravisco-kelas-item img {
     width: 80%;
+    border-radius: 0 30px 0 30px;
+    -webkit-border-radius: 0 30px 0 30px;
+    -moz-border-radius: 0 30px 0 30px;
+    -ms-border-radius: 0 30px 0 30px;
+    -o-border-radius: 0 30px 0 30px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .stravisco-kelas-item h1 {
@@ -202,6 +208,12 @@ a {
 
 .stravisco-singlekelas-item img {
     width: 100%;
+    border-radius: 0 30px 0 30px;
+    -webkit-border-radius: 0 30px 0 30px;
+    -moz-border-radius: 0 30px 0 30px;
+    -ms-border-radius: 0 30px 0 30px;
+    -o-border-radius: 0 30px 0 30px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .stravisco-singlekelas-item h1 {
@@ -212,7 +224,7 @@ a {
 }
 
 .stravisco-singlekelas-item p {
-    font-size: 15px;
+    font-size: 13px;
     font-style: italic;
     text-decoration: underline;
     color: #000;
@@ -237,6 +249,41 @@ a {
 
 .kelas-title:hover::after {
     width: 115px;
+}
+
+#gambarModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#gambarModal .modal-content {
+    margin: 3rem auto 3rem auto;
+    display: block;
+    width: 300px;
+    max-width: 70%;
+}
+
+#gambarModal .tutup {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 /* Flex */
@@ -264,6 +311,13 @@ a {
     .kelas-title h1 {
         font-size: 25px;
     }
+
+    .stravisco-singlekelas-item img {
+        width: 300px;
+    }
+    .stravisco-singlekelas-item {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 910px) {
@@ -285,6 +339,19 @@ a {
         top: -47px;
         font-size: 35px;
     }
+    .stravisco-singlekelas-item img {
+        width: 200px;
+    }
+    .stravisco-singlekelas-item h1 {
+        font-size: 17px;
+    }
+    
+    .stravisco-singlekelas-item p {
+        font-size: 13px;
+    }
+    .stravisco-singlekelas-item {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -295,6 +362,28 @@ a {
         left: 10px;
         top: -40px;
         font-size: 25px;
+    }
+    .stravisco-jurusan-item img {
+        width: 100px;
+    }
+    .stravisco-jurusan-item h1 {
+        font-size: 15px;
+    }
+    .stravisco-singlekelas-item img {
+        width: 160px;
+    }
+    footer {
+        font-size: 20px;
+    }
+    .stravisco-singlekelas-item h1 {
+        font-size: 15px;
+    }
+    
+    .stravisco-singlekelas-item p {
+        font-size: 11px;
+    }
+    .stravisco-singlekelas-item {
+        margin-top: 0;
     }
 }
 
