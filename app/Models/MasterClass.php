@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Crypt;
+use App\Models\PhotoGroup;
 
 
 class MasterClass extends Model
@@ -50,5 +51,17 @@ class MasterClass extends Model
     public function enkripsiId(  ) 
     {
         return  Crypt::encrypt($this->id);
+    }
+
+    public function ambilSatuFotoKelas(  ) 
+    {
+        $satuFoto = PhotoGroup::where('class_id', '=', $this->id)->where('type_foto', 1)->first();
+        return $satuFoto;
+    }
+    
+    public function ambilFotoKelas(  ) 
+    {
+        $fotoSekelas = PhotoGroup::where('class_id', '=', $this->id)->where('type_foto', 1)->take(5)->get();
+        return $fotoSekelas;
     }
 }

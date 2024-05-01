@@ -15,7 +15,7 @@ class JurusanController extends Controller
 
         $jurusan = MasterClass::where('id',$idJurusan)->first();
         $kumpulanKelas = MasterClass::where('id', 'like',  $idJurusan . '__.')->get();
-        
+    
         return view('user.kelas.kelas', [
             'jurusan' => $jurusan->name,
             'kumpulanKelas' => $kumpulanKelas,
@@ -36,10 +36,11 @@ class JurusanController extends Controller
     public function aksiAmbilKelas( Request $request , $jurusan , $kelas ) 
     {
         $id_kelas = decrypt($kelas);
-        $student = MasterStudent::where('class_id', $id_kelas)->get();
-
-        return view('user.kelas.singlekelas');
-        // bikin dap disini
-        // dd($student);
+        $kelas = MasterClass::find($id_kelas);
+        $data = MasterStudent::where('class_id', $id_kelas)->get();
+        return view('user.kelas.singlekelas', [
+            'kelas' => $kelas,
+            'data' => $data,
+        ]);
     }
 }

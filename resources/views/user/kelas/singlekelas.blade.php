@@ -7,21 +7,11 @@
                 <div class="carousel-item active">
                     <img src="/img/gedung-tei.jpg" class="d-block w-100" alt="Gedung kelas">
                 </div>
+                @foreach ($kelas->ambilFotoKelas() as $item)
                 <div class="carousel-item">
-                    <img src="/img/gedung-tkj.jpg" class="d-block w-100" alt="Gedung kelas">
+                    <img src="{{ Storage::url($item->photo) }}" class="d-block w-100" alt="Gedung kelas">
                 </div>
-                <div class="carousel-item">
-                    <img src="/img/gedung-tsm.jpg" class="d-block w-100" alt="Gedung kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/gedung-ak.jpg" class="d-block w-100" alt="Gedung kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/gedung-rpl.jpg" class="d-block w-100" alt="Gedung kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/gedung-tet.jpg" class="d-block w-100" alt="Gedung kelas">
-                </div>
+                @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
@@ -40,7 +30,7 @@
             <div class="row">
                 <div class="col">
                     <div class="kelas-title mt-80">
-                        <h1 class="text-center">Kelas</h1>
+                        <h1 class="text-center">Kelas {{ $kelas->name }}</h1>
                     </div>
                 </div>
             </div>
@@ -54,31 +44,13 @@
                     </a>
                 </div>
                 @endforeach --}}
+                @foreach ($data as $item)
                 <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
-                    <h1>Adam Aulia Rachman</h1>
-                    <p>"Lorem ipsum dolor sit, amet consectetur adipisicing."</p>
+                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid gambar" alt="foto {{ $item->student_name }}">
+                    <h1>{{ $item->student_name }}</h1>
+                    <p>"{{ $item->quotes }}"</p>
                 </div>
-                <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
-                    <h1>Adam Aulia Rachman</h1>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
-                </div>
-                <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
-                    <h1>Adam Aulia Rachman</h1>
-                    <p>"Lorem ipsum dolor sit amet consectetur."</p>
-                </div>
-                <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
-                    <h1>Adam Aulia Rachman</h1>
-                    <p>"Lorem ipsum dolor sit amet."</p>
-                </div>
-                <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="Rekayasa Perangkat Lunak">
-                    <h1>Adam Aulia Rachman</h1>
-                    <p>"Lorem ipsum dolor sit amet."</p>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
