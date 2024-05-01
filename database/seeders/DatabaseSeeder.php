@@ -170,7 +170,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         MasterClass::create([
-            'id' => '01.06.04',
+            'id' => '01.06.04.',
             'name' => 'Teknik Komputer Dan Jaringan | IconNet',
         ]);
 

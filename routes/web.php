@@ -27,7 +27,18 @@ Route::prefix('jurusan')->group(function () {
 Route::prefix('dashboard')->middleware('auth')->group( function(){
     Route::get('/', [AdminController::class, 'index']);
     Route::prefix('photo')->group(function () {
-        Route::get('/', [AdminController::class, 'aksiTampilFoto']);
+        // Route::get('group', [AdminController::class, 'aksiTampilFotoGroup']);
+        Route::prefix('group')->group(function () {
+            Route::get('/',[AdminController::class, 'aksiTampilFotoGroup'] );
+            Route::get('/{filter}', [AdminController::class, 'aksiTampilFotoGroup']);
+        });
+        
+        Route::prefix('individual')->group(function(){
+            Route::get('/', [AdminController::class, 'aksiTampilFotoIndividual']);
+            Route::get('/{filter}', [AdminController::class, 'aksiTampilFotoIndividual']);
+            Route::get('/{filter}/{kelas}/tambah', [AdminController::class, 'aksiTambahFotoIndividual']);
+            Route::post('/aksiTambahSiswa', [AdminController::class, 'aksiTambahSiswa'] );
+        });
     });
 
     Route::prefix('register')->group(function(){
@@ -37,13 +48,13 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
 
 });
 
-Route::get('/masukanfoto/{jurusan}/{kelas}', [IndividuPhotoController::class, 'aksiMasukanFotoIndividu']);
 Route::get('masukanfoto/', [IndividuPhotoController::class, 'aksiMasukanFoto']);
 
 Route::prefix('login')->middleware('guest')->group(function () {
     Route::get('/', [AdminController::class, 'aksiTampilLogin'])->name('login');
     Route::post('/aksiLogin', [AdminController::class, 'aksiLoginAplikasi']);
 });
+
 
 
 

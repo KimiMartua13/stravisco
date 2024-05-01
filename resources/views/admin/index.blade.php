@@ -81,7 +81,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="/dashboard">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -93,12 +93,12 @@
         </a>
         <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Students</span>
+            <a href="/dashboard/photo/individual/">
+              <i class="bi bi-circle"></i><span>individuals</span>
             </a>
           </li>
           <li>
-            <a href="icons-remix.html">
+            <a href="/dashboard/photo/group/">
               <i class="bi bi-circle"></i><span>Groups</span>
             </a>
           </li>
@@ -126,13 +126,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav>
+      <h1>{{ $title }}</h1>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
