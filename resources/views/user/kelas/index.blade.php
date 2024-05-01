@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stravisco | Jurusan</title>
-    @include('backup-landing/assets/header')
+    <title>Stravisco | Kelas</title>
+    @include('user/assets/header')
 
 </head>
 
 <body>
-    @include('backup-landing/partials/navbar')
+    @include('user/partials/navbar')
 
     @yield('main')
 
-    @include('backup-landing/assets/footer')
+    @include('user/assets/footer')
 
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>

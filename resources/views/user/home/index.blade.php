@@ -1,96 +1,84 @@
-@extends('/user/main')
+@extends('user/main')
 
 @section('main')
-    <section id="stravisco-moment">
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/img/moment1.jpg" class="d-block w-100" alt="Moment 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/moment2.jpg" class="d-block w-100" alt="Moment 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/moment3.jpg" class="d-block w-100" alt="Moment 3">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+    <section class="hero">
+        <img src="/img/moment1.jpg" alt="Moment" class="img-fluid">
     </section>
 
-    <section id="stravisco-definiton">
-        <div class="card-stravisco card-definition">
-            <div class="card stravisco-wrapper">
-                <div class="card-body text-definition text-white">
-                    <h4>Stravisco</h4>
-                    <p>Pembebasan, dalam konteks yang lebih luas, mencakup memberikan ruang dan kesempatan bagi anak muda
-                        untuk
-                        menguatkan ide, gagasan, dan kreativitas positif mereka tanpa harus kehilangan identitas atau jati
-                        diri
-                        mereka. Ini melibatkan pengembangan lingkungan yang mendukung di mana mereka merasa aman untuk
-                        mengekspresikan diri mereka tanpa takut akan penilaian atau pembatasan eksternal yang membatasi
-                        pertumbuhan
-                        mereka.</p>
+    <div class="stravisco-area section-padding-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="stravisco-title">
+                        <h2>We Are <b>STRAVISCO</b></h2>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="stravisco-jurusan">
-        <div class="container">
-            <h1 class="text-center" style="margin-top: 150px">Jurusan</h1>
-            <div class="row text-center jurusan-1">
-                <div class="col-lg-4">
-                    <a href="/jurusan/rpl">
-                        <img src="/img/rpl_logo.png" alt="Rekayasa Perangkat Lunak">
-                        <h1>Rekayasa Perangkat <br> Lunak</h1>
-                    </a>
+            <div class="row mt-80 single-content-item stravisco-item">
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-content-1">
+                        <img src="/img/DSC01090.jpg" class="img-fluid" alt="">
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <a href="/jurusan/tkj">
-                        <img src="/img/tkj_logo.png" alt="Teknik Komputer dan Jaringan">
-                        <h1>Teknik Komputer <br> dan Jaringan</h1>
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="/jurusan/tei">
-                        <img src="/img/tei_logo.png" alt="Teknik Elektronika Industri">
-                        <h1>Teknik Elektronika <br> Industri</h1>
-                    </a>
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-text text-custom-1">
+                        <h2>Liberation</h2>
+                    </div>
                 </div>
             </div>
-            <div class="row jurusan-2">
-                <div class="col-lg-4">
-                    <a href="/jurusan/tbsm">
-                        <img src="/img/tsm_logo.png" alt="Teknik dan Bisnis Sepeda Motor">
-                        <h1>Teknik dan Bisnis <br> Sepeda Motor</h1>
-                    </a>
+            <div class="row mt-80 single-content-item stravisco-item">
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-text text-custom-2">
+                        <h2>Strong Determination</h2>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <a href="/jurusan/ak"><img src="/img/ak_logo.png" alt="Akuntansi dan Keuangan Lembaga">
-                        <h1>Akuntansi dan <br> Keuangan Lembaga</h1>
-                    </a>
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-content-2">
+                        <img src="/img/DSC01125.jpg" class="img-fluid" alt="">
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <a href="/jurusan/tet">
-                        <img src="/img/tet_logo.png" alt="Teknik Energi Terbarukan">
-                        <h1>Teknik Energi <br> Terbarukan</h1>
-                    </a>
+            </div>
+            <div class="row mt-80 single-content-item stravisco-item">
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-content-3">
+                        <img src="/img/DSC01137.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-text text-custom-3">
+                        <h2>Strengthening Ideas</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-80 single-content-item stravisco-item">
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-text text-custom-4">
+                        <h2>Creativity</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="stravisco-content-2">
+                        <img src="/img/DSC01142.jpg" class="img-fluid" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="bg-dark text-center text-white py-3">
-        <h1>Stravisco</h1>
-    </footer>
+    <div class="stravisco-weare section-padding-0-100">
+        <div class="stravisco-backend">
+            <h2 class="noselect">Stravisco</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="we-are">
+                        <h2>"We can make a differance"</h2>
+                        <h4>Lorem ipsum dolor sit.</h4>
+                        <a href="" class="btn btn-primary mt-80">asda</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
