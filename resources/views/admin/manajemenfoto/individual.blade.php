@@ -39,6 +39,14 @@
                             <div class="col text-center">
                                 <img width="250px" src="{{ Storage::url( $data->photo ) }}" loading="lazy" class="mb-3" alt="Deskripsi Gambar">
                                 <p>{{ $data->student_name }}</p>
+                                <div class="d-flex gap-3 justify-content-center mb-3">
+                                    <form action="/dashboard/photo/individual/edit" method="post">
+                                        @csrf
+                                        <input type="hidden" value="{{ $data->enkripsiId() }}" name="student_id">
+                                        <button class="btn" style="background-color: #012970; color:white;">Ubah Siswa</button>
+                                    </form>
+                                    <button class="btn" style="background-color: #012970; color:white;">Hapus Siswa</button>
+                                </div>
                             </div>
                         @endforeach
                         

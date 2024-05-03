@@ -78,7 +78,7 @@ class AdminController extends Controller
             $kelas = $kelas->where('master_classes.id', 'like', '01.06.__.');
         }
 
-
+        $kelas = $kelas->orderBy('student_name', 'asc');
         $kelas = $kelas->get()->groupBy('name');
 
         return view('admin.manajemenfoto.individual',[
@@ -148,18 +148,45 @@ class AdminController extends Controller
         if ( count($id_data) == 3 ) {
             return redirect()->back();
         }
-        $dataSiswa = MasterStudent::first();
-
+        
         return view('admin/manajemenfoto/individual/tambah', [
             'title' => 'Tambah Data Siswa Kelas ' . $data->name,
             'kelas' => $data,
-            'tipe' => 'tambah',
-            'dataSiswa' => $dataSiswa,
         ]);
     }
 
     public function aksiTambahSiswa( Request $request ) 
     {
-        dd($request);
+        $path = $request->file('foto_siswa')->store('public/photo_individual');
+        
+        MasterStudent::create([
+            'student_name' => $request->nama,
+            'quotes' => $request->quotes,
+            'photo' => $path,
+            'class_id' => $request->id,
+        ]);
+        
+        return redirect()->back();
+    }
+
+    public function aksiEditSiswa( Request $request ) 
+    {
+        $id = decrypt($request->student_id);
+        $siswa = MasterStudent::find($id);
+
+        return view('admin/manajemenfoto/individual/edit', [
+            'title' => 'Edit Siswa ' . $siswa->name,
+            'dataSiswa' => $siswa,
+        ]);
+    }
+
+    public function aksiEditIndividual( Request $request ) 
+    {
+        dd($request);        
+    }
+    
+    public function aksiHapusFotoIndividual( Request $request, $filter, $kelas, $siswa ) 
+    {
+        dd($siswa);
     }
 }

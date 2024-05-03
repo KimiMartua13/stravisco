@@ -32,7 +32,12 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
             Route::get('/', [AdminController::class, 'aksiTampilFotoIndividual']);
             Route::get('/{filter}', [AdminController::class, 'aksiTampilFotoIndividual']);
             Route::get('/{filter}/{kelas}/tambah', [AdminController::class, 'aksiTambahFotoIndividual']);
+            Route::get('/{filter}/{kelas}/hapus/{siswa}', [AdminController::class, 'aksiHapusFotoIndividual']);
             Route::post('/aksiTambahSiswa', [AdminController::class, 'aksiTambahSiswa'] );
+
+            
+            Route::post('/edit', [AdminController::class, 'aksiEditSiswa']);
+            Route::post('/aksiEditIndividual', [AdminController::class, 'aksiEditIndividual']);
         });
     });
 
