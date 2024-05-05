@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Crypt;
 
+use Vinkla\Hashids\Facades\Hashids;
+
 class MasterStudent extends Model
 {
     use HasFactory;
@@ -19,5 +21,10 @@ class MasterStudent extends Model
     public function enkripsiId(  ) 
     {
         return  Crypt::encrypt($this->id);
+    }
+
+    public function enkripsiIdStudent(  ) 
+    {
+        return Hashids::encode($this->id);
     }
 }

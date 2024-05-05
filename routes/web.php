@@ -38,6 +38,8 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
             
             Route::post('/edit', [AdminController::class, 'aksiEditSiswa']);
             Route::post('/aksiEditIndividual', [AdminController::class, 'aksiEditIndividual']);
+
+            Route::post('/hapus', [AdminController::class, 'aksiHapusIndividual']);
         });
     });
 

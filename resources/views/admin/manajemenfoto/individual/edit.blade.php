@@ -5,7 +5,7 @@
         <div class="col">
             <form action="/dashboard/photo/individual/aksiEditIndividual" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="hidden" name="id" value="{{$dataSiswa->class_id}}">
+            <input type="hidden" name="id" value="{{$dataSiswa->enkripsiIdStudent()}}">
             <div class="card info-card">
                 <div class="card-body" style="margin-top: 15px;">
                     <div class="mb-3">

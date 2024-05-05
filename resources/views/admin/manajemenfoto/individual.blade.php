@@ -45,7 +45,9 @@
                                         <input type="hidden" value="{{ $data->enkripsiId() }}" name="student_id">
                                         <button class="btn" style="background-color: #012970; color:white;">Ubah Siswa</button>
                                     </form>
-                                    <button class="btn" style="background-color: #012970; color:white;">Hapus Siswa</button>
+                                    <form action="/dashboard/photo/individual/hapus" method="post">
+                                        <button class="btn" style="background-color: #012970; color:white;">Hapus Siswa</button>
+                                    </form>
                                 </div>
                             </div>
                         @endforeach

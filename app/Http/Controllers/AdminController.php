@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redis;
-use Illuminate\Support\Facades\Auth;
+
 use App\Models\User;
 use App\Models\PhotoGroup;
 use App\Models\MasterClass;
 use App\Models\MasterStudent;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
+
+use Vinkla\Hashids\Facades\Hashids;
 
 class AdminController extends Controller
 {
@@ -182,11 +188,28 @@ class AdminController extends Controller
 
     public function aksiEditIndividual( Request $request ) 
     {
-        dd($request);        
+        $validator = Validator::make($request->all(), [
+            'nama' => 'required|string',
+            'quotes' => 'required|string',
+            'foto_siswa' => 'required|file|max:2500',
+            'id' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('post/create')->withErrors($validator)->withInput();
+        }
+
+        $validated = $validator->validated();
+        $id = Hashids::decode($validated['id']);
+        $student = MasterStudent::find($id)->first();
+
+        $fileName = $student->photo;
+        $file = Storage::delete($fileName);
+        dd($file);
     }
     
-    public function aksiHapusFotoIndividual( Request $request, $filter, $kelas, $siswa ) 
+    public function aksiHapusFotoIndividual( Request $request ) 
     {
-        dd($siswa);
+        dd($request);
     }
 }
