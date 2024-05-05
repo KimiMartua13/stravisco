@@ -10,6 +10,9 @@ use App\Http\Controllers\IndividuPhotoController;
 
 Route::get('/', [UserController::class, 'index']);
 Route::get('/jurusan', [JurusanController::class, 'index']);
+Route::get('/test', function () {
+    return view('user/kelas/singlekelascopy');
+});
 // Route::get('/jurusan/{jurusan}', [ClassController::class, 'index']);
 
 Route::prefix('jurusan')->group(function () {
