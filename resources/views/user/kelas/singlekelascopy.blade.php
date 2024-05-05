@@ -49,16 +49,16 @@
                 @endforeach --}}
 
                 <div class="change-parent-btn d-flex justify-content-center gap-4">
-                    <a href="#" class="change-link">
+                    <a href="#">
                         <button class="change-btn active">test 1</button>
                     </a>
-                    <a href="#" class="change-link">
+                    <a href="#">
                         <button class="change-btn">test 2</button>
                     </a>
-                    <a href="#" class="change-link">
+                    <a href="#">
                         <button class="change-btn">test 3</button>
                     </a>
-                    <a href="#" class="change-link">
+                    <a href="#">
                         <button class="change-btn">test 4</button>
                     </a>
                 </div>
