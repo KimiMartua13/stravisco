@@ -20,4 +20,9 @@ $(document).ready(function () {
     $(".tutup").click(function () {
         $("#gambarModal").fadeOut();
     });
+
+    $(".change-btn").click(function () {
+        $(".change-btn").removeClass("active");
+        $(this).addClass("active");
+    })
 });
