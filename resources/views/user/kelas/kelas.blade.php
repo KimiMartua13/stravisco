@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="row stravisco-kelas-item justify-content-center">
+            {{-- <div class="row stravisco-kelas-item justify-content-center">
                 @foreach ($kumpulanKelas as $item)
                 <div class="col-lg-6" style="margin-bottom: 20px;">
                     <img src="{{ Storage::url($item->ambilSatuFotoKelas()->photo) }}" class="img-fluid gambar" height="500px" alt="Foto Jurusan {{ $item->name }}">
@@ -48,12 +48,19 @@
                     </a>
                 </div>
                 @endforeach
+            </div> --}}
+
+            <div class="row stravisco-kelas-item justify-content-center">
+                @foreach ($kumpulanKelas as $item)
+                <div class="col-lg-6" style="margin-bottom: 20px;">
+                    <a href="/jurusan/{{ $item->getSingkatanNamaJurusan() }}/{{ $item->enkripsiId() }}">
+                        <img src="/img/moment1.jpg" class="img-fluid" height="500px" alt="Foto Jurusan {{ $item->name }}">
+                        <h1>{{ $item->name }}</h1>
+                    </a>
+                </div>
+                @endforeach
             </div>
 
         </div>
-    </div>
-    <div id="gambarModal">
-        <span class="tutup">&times;</span>
-        <img class="modal-content" id="imgModal">
     </div>
 @endsection

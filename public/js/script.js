@@ -21,6 +21,12 @@ $(document).ready(function () {
         $("#gambarModal").fadeOut();
     });
 
+    $("#gambarModal").click(function(e){
+        if ($(e.target).is("#gambarModal")) {
+            $(this).fadeOut();
+        }
+    });
+
     $(".change-btn").click(function () {
         $(".change-btn").removeClass("active");
         $(this).addClass("active");
