@@ -11,7 +11,10 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/jurusan">Jurusan</a>
+                    <a class="nav-link" href="/guru">Teacher's</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/jurusan">Major's</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>

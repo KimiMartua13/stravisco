@@ -7,6 +7,7 @@ use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\IndividuPhotoController;
+use App\Http\Controllers\GuruController;
 
 Route::get('/', [UserController::class, 'index']);
 Route::get('/jurusan', [JurusanController::class, 'index']);
@@ -14,6 +15,8 @@ Route::get('/test', function () {
     return view('user/kelas/singlekelascopy');
 });
 // Route::get('/jurusan/{jurusan}', [ClassController::class, 'index']);
+
+Route::get('/guru', [GuruController::class, 'index']);
 
 Route::prefix('jurusan')->group(function () {
     Route::prefix('{jurusan}')->group(function () {
@@ -40,7 +43,7 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
             Route::get('/{filter}/{kelas}/tambah', [AdminController::class, 'aksiTambahFotoIndividual']);
             Route::get('/{filter}/{kelas}/hapus/{siswa}', [AdminController::class, 'aksiHapusFotoIndividual']);
             Route::post('/aksiTambahSiswa', [AdminController::class, 'aksiTambahSiswa'] );
-
+            
             
             Route::post('/edit', [AdminController::class, 'aksiEditSiswa']);
             Route::post('/aksiEditIndividual', [AdminController::class, 'aksiEditIndividual']);
