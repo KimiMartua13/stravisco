@@ -28,8 +28,11 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
         // Route::get('group', [AdminController::class, 'aksiTampilFotoGroup']);
         Route::prefix('group')->group(function () {
             Route::get('/',[AdminController::class, 'aksiTampilFotoGroup'] );
-            Route::get('/{filter}', [AdminController::class, 'aksiTampilFotoGroup']);
+            Route::get('/{jurusan}/', [AdminController::class, 'aksiTampilFotoGroup']);
+            Route::get('/{jurusan}/{filter}', [AdminController::class, 'aksiTampilFotoGroup']);
         });
+
+        Route::get('/tambah/group/{jurusan}', [AdminController::class, 'aksiTambahFotoGroup']);
         
         Route::prefix('individual')->group(function(){
             Route::get('/', [AdminController::class, 'aksiTampilFotoIndividual']);
@@ -42,7 +45,7 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
             Route::post('/edit', [AdminController::class, 'aksiEditSiswa']);
             Route::post('/aksiEditIndividual', [AdminController::class, 'aksiEditIndividual']);
 
-            Route::post('/hapus', [AdminController::class, 'aksiHapusIndividual']);
+            Route::post('/hapus', [AdminController::class, 'aksiHapusFotoIndividual']);
         });
     });
 

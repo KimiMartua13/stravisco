@@ -35,9 +35,25 @@ class AdminController extends Controller
         ]);
     }
 
-    public function aksiTampilFotoGroup( Request $request , $filter = 'all') 
+    public function aksiTampilFotoGroup( Request $request , $jurusan = 'ak' , $filter = 'all') 
     {
-        $fotoGroup = PhotoGroup::select('*');
+        $fotoGroup = PhotoGroup::leftJoin('master_classes', 'photo_groups.class_id', '=', 'master_classes.id');
+
+        if ( $jurusan == 'ak') {
+            $fotoGroup = $fotoGroup->where('master_classes.id', 'like', '01.01.__.');
+        } elseif ( $jurusan == 'rpl') {
+            $fotoGroup = $fotoGroup->where('master_classes.id', 'like', '01.02.__.');
+        } elseif ($jurusan == 'tei'){
+            $fotoGroup = $fotoGroup->where('master_classes.id', 'like', '01.03.__.');
+        }elseif ($jurusan == 'tet'){
+            $fotoGroup = $fotoGroup->where('master_classes.id', 'like', '01.04.__.');
+        }elseif ($jurusan == 'tsm'){
+            $fotoGroup = $fotoGroup->where('master_classes.id', 'like', '01.05.__.');
+        }elseif ($jurusan == 'tkj'){
+            $fotoGroup = $fotoGroup->where('master_classes.id', 'like', '01.06.__.');
+        }else{
+            return redirect('error');
+        }
 
         if ( $filter == 'group' ) {
             $fotoGroup->where('type_foto', '1');
@@ -49,20 +65,63 @@ class AdminController extends Controller
             $fotoGroup->where('type_foto', '3');
             $title = 'Kelompok';
         }elseif($filter == 'all'){
-            $title = 'All';
+            $title = 'Semua';
         }else{
             return redirect('error');
         }
-
+        
         $jumlahFoto = $fotoGroup->count();
-        $fotoGroup = $fotoGroup->get();
+        $fotoGroup = $fotoGroup->get()->groupBy('name');
 
         return view('admin.manajemenfoto.group',[
             'title' => 'Photo Groups',
             'fotoGroup' => $fotoGroup,
-            'cardTitle' => $title,
-            'jumlahFoto' => $jumlahFoto,
+            'jurusan' => $jurusan,
+            'title' => $title,
         ]);
+    }
+
+    public function aksiTambahFotoGroup( Request $request, $jurusan ) 
+    {
+        $kelas = MasterClass::select('*');
+
+        if ( $jurusan == 'ak') {
+            $kelas = $kelas->where('id', 'like', '01.01.__.');
+        } elseif ( $jurusan == 'rpl') {
+            $kelas = $kelas->where('id', 'like', '01.02.__.');
+        } elseif ($jurusan == 'tei'){
+            $kelas = $kelas->where('id', 'like', '01.03.__.');
+        }elseif ($jurusan == 'tet'){
+            $kelas = $kelas->where('id', 'like', '01.04.__.');
+        }elseif ($jurusan == 'tsm'){
+            $kelas = $kelas->where('id', 'like', '01.05.__.');
+        }elseif ($jurusan == 'tkj'){
+            $kelas = $kelas->where('id', 'like', '01.06.__.');
+        }else{
+            return redirect('error');
+        }
+
+        $tipe = [
+            [
+                'name' => 'Group',
+                'value' => 1,
+            ],
+            [
+                'name' => 'Putbu',
+                'value' => 2,
+            ],
+            [
+                'name' => 'Kelompok',
+                'value' => 3,
+            ],
+        ];
+
+        return view('admin/manajemenfoto/group/tambah', [
+            'title' => 'Tambah Foto Group ' . strtoupper($jurusan),
+            'kelas' => $kelas->get(),
+            'tipe' => $tipe,
+        ]);
+
     }
 
     public function aksiTampilFotoIndividual( Request $request, $filter = 'ak' ) 
@@ -191,25 +250,40 @@ class AdminController extends Controller
         $validator = Validator::make($request->all(), [
             'nama' => 'required|string',
             'quotes' => 'required|string',
-            'foto_siswa' => 'required|file|max:2500',
             'id' => 'required',
+            'foto_siswa' => 'sometimes|required|max:2500'
         ]);
 
+
         if ($validator->fails()) {
-            return redirect('post/create')->withErrors($validator)->withInput();
+            return redirect('/dashboard/photo/individual/')->withErrors($validator);
         }
+
 
         $validated = $validator->validated();
         $id = Hashids::decode($validated['id']);
         $student = MasterStudent::find($id)->first();
 
-        $fileName = $student->photo;
-        $file = Storage::delete($fileName);
-        dd($file);
+
+        if ($request->file('foto_siswa')) {
+            $fileName = $student->photo;
+            Storage::delete($fileName);
+            $path = $request->file('foto_siswa')->store('public/photo_individual');
+            $student->photo = $path;
+        }
+        $student->student_name = $validated['nama'];
+        $student->quotes = $validated['quotes'];
+
+        $student->save();
+
+        return redirect('/dashboard/photo/individual/')->with('Siswa Berhasil Diubah');
     }
     
     public function aksiHapusFotoIndividual( Request $request ) 
     {
-        dd($request);
+        $id = decrypt($request->student_id);
+        $siswa = MasterStudent::find($id);
+        $siswa->delete();
+        return back()->with('msg', 'Berhasil Dihapus');
     }
 }

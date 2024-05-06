@@ -1,24 +1,31 @@
 @extends('admin.index')
 
 @section('main')
-    <div class="row">
-        <div class="col">
-            <form action="/dashboard/photo/individual/aksiTambahSiswa" method="POST" enctype="multipart/form-data">
+<div class="row">
+    <div class="col">
+        <form action="/dashboard/photo/individual/aksiTambahSiswa" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="hidden" name="id" value="{{$kelas->id}}">
             <div class="card info-card">
                 <div class="card-body" style="margin-top: 15px;">
                     <div class="mb-3">
-                        <label class="form-label" style="color: #012970;">Nama Siswa</label>
-                        <input type="text" class="form-control" placeholder="Nama Siswa" name="nama">
+                        <label for="kelas" class="form-label">Pilih kelas</label>
+                        <select class="form-select">
+                            @foreach ($kelas as $item)
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" style="color: #012970;">Quotes Siswa</label>
-                        <textarea class="form-control" rows="3" name="quotes"></textarea>
+                        <label for="kelas" class="form-label">Pilih Tipe Foto</label>
+                        <select class="form-select">
+                            @foreach ($tipe as $item)
+                                <option value="{{ $item['value'] }}">{{ $item['name'] }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" style="color: #012970;">Foto Siswa</label>
-                        <input class="form-control" type="file" id="formFile" name="foto_siswa" onchange="previewFile(this)">
+                        <label class="form-label" style="color: #012970;">Foto Group</label>
+                        <input class="form-control" type="file" id="formFile" name="foto_group" onchange="previewFile(this)">
                     </div>
                     <div class="mb-3">
                         <div class="d-flex">
@@ -33,10 +40,10 @@
                     </div>
                 </div>
             </div>
-            </form>
-        </div>
+        </form>
     </div>
-    <script src="/js/jquery/jquery.min.js"></script>
+</div>
+<script src="/js/jquery/jquery.min.js"></script>
     <script>
         
     function previewFile(input){
@@ -55,4 +62,5 @@
     }
 
     </script>
+
 @endsection
