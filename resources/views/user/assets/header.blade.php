@@ -8,3 +8,4 @@
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/landing-page.css">
 <script src="/js/jquery/jquery.min.js"></script>
+<script src="/js/elevatezoom/jquery.elevatezoom.js"></script>

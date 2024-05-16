@@ -2,7 +2,7 @@
 
 @section('main')
     <section class="hero">
-        <img src="/img/moment1.jpg" alt="Moment" class="img-fluid">
+        <img src="/img/siang1.jpg" alt="Moment" class="img-fluid landscape">
     </section>
 
     <div class="stravisco-area section-padding-100">
@@ -17,7 +17,8 @@
             <div class="row mt-80 single-content-item stravisco-item">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-1">
-                        <img src="/img/DSC01090.jpg" class="img-fluid" alt="">
+                        {{-- <img src="/img/siang2.jpg" class="img-fluid landscape" alt=""> --}}
+                        <img id="randomImage1" class="img-fluid landscape" alt="Stravisco Moment">
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -34,14 +35,16 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-2">
-                        <img src="/img/DSC01125.jpg" class="img-fluid" alt="">
+                        {{-- <img src="/img/siang3.jpg" class="img-fluid landscape" alt=""> --}}
+                        <img id="randomImage2" class="img-fluid landscape" alt="Stravisco Moment">
                     </div>
                 </div>
             </div>
             <div class="row mt-80 single-content-item stravisco-item">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-3">
-                        <img src="/img/DSC01137.jpg" class="img-fluid" alt="">
+                        {{-- <img src="/img/siang4.jpg" class="img-fluid landscape" alt=""> --}}
+                        <img id="randomImage3" class="img-fluid landscape" alt="Stravisco Moment">
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -58,7 +61,8 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-2">
-                        <img src="/img/DSC01142.jpg" class="img-fluid" alt="">
+                        {{-- <img src="/img/siang5.jpg" class="img-fluid landscape" alt=""> --}}
+                        <img id="randomImage4" class="img-fluid landscape" alt="Stravisco Moment">
                     </div>
                 </div>
             </div>

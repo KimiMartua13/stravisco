@@ -1,4 +1,4 @@
-@extends('user/guru/index')
+@extends('user/main')
 
 @section('main')
     <div class="our-teacher">
@@ -47,35 +47,31 @@
                 </div>
                 @endforeach --}}
                 <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="">
+                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="">
+                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="">
+                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="">
+                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3">
-                    <img src="/img/adam.jpg" class="img-fluid gambar" alt="">
+                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="gambarModal">
-        <span class="tutup">&times;</span>
-        <img class="modal-content" id="imgModal">
     </div>
 @endsection
