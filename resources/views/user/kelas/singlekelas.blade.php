@@ -1,4 +1,4 @@
-@extends('user/kelas/index')
+@extends('user/main')
 
 @section('main')
     <div class="kelas-building">
@@ -58,7 +58,7 @@
 
                 @foreach ($data as $item)
                 <div class="col-lg-3">
-                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid gambar" alt="foto {{ $item->student_name }}">
+                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid potrait" alt="foto {{ $item->student_name }}">
                     <h1>{{ $item->student_name }}</h1>
                     <p>"{{ $item->quotes }}"</p>
                 </div>
@@ -66,8 +66,5 @@
             </div>
         </div>
     </div>
-    <div id="gambarModal">
-        <span class="tutup">&times;</span>
-        <img class="modal-content" id="imgModal">
-    </div>
+    
 @endsection

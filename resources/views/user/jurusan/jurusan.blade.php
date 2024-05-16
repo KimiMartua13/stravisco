@@ -1,4 +1,4 @@
-@extends('user/jurusan/index')
+@extends('user/main')
 
 @section('main')
     <div class="jurusan-building">

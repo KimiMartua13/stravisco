@@ -17,6 +17,18 @@
 
     @include('user/assets/footer')
 
+    <div id="gambarModalPotrait">
+        <span class="tutup">&times;</span>
+        <img class="modal-content-potrait" id="imgModalPotrait">
+        <h2>Adam Aulia Rachman</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    
+    <div id="gambarModalLandscape">
+        <span class="tutup">&times;</span>
+        <img class="modal-content-landscape" id="imgModalLandscape">
+    </div>
+
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
 </body>
