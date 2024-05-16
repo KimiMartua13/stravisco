@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Crypt;
 use App\Models\PhotoGroup;
 
+use Vinkla\Hashids\Facades\Hashids;
+
 
 class MasterClass extends Model
 {
@@ -64,4 +66,5 @@ class MasterClass extends Model
         $fotoSekelas = PhotoGroup::where('class_id', '=', $this->id)->where('type_foto', 1)->take(5)->get();
         return $fotoSekelas;
     }
+
 }

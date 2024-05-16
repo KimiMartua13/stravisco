@@ -27,8 +27,11 @@ $(document).ready(function () {
         }
     });
 
-    $(".change-btn").click(function () {
-        $(".change-btn").removeClass("active");
-        $(this).addClass("active");
-    })
+    var currentLocation = window.location.href;
+
+    $('.change-parent-btn a').each(function(){
+        if ($(this).attr("href") === currentLocation) {
+            $(this).closest('.change-btn button').addClass("active");
+        }
+    });
 });

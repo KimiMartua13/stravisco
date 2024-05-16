@@ -37,7 +37,8 @@ class AdminController extends Controller
 
     public function aksiTampilFotoGroup( Request $request , $jurusan = 'ak' , $filter = 'all') 
     {
-        $fotoGroup = PhotoGroup::leftJoin('master_classes', 'photo_groups.class_id', '=', 'master_classes.id');
+        $fotoGroup = PhotoGroup::leftJoin('master_classes', 'photo_groups.class_id', '=', 'master_classes.id')
+                                ->select('master_classes.id as idc', 'photo_groups.id', 'photo_groups.class_id', 'type_foto', 'name', 'photo');
 
         if ( $jurusan == 'ak') {
             $fotoGroup = $fotoGroup->where('master_classes.id', 'like', '01.01.__.');
@@ -55,9 +56,10 @@ class AdminController extends Controller
             return redirect('error');
         }
 
-        if ( $filter == 'group' ) {
+        
+        if ( $filter == 'sekelas' ) {
             $fotoGroup->where('type_foto', '1');
-            $title = 'Group';
+            $title = 'Sekelas';
         }else if( $filter == 'putbu' ){
             $fotoGroup->where('type_foto', '2');
             $title = 'Putbu';
@@ -72,6 +74,8 @@ class AdminController extends Controller
         
         $jumlahFoto = $fotoGroup->count();
         $fotoGroup = $fotoGroup->get()->groupBy('name');
+
+        // dd($fotoGroup);
 
         return view('admin.manajemenfoto.group',[
             'title' => 'Photo Groups',
@@ -103,7 +107,7 @@ class AdminController extends Controller
 
         $tipe = [
             [
-                'name' => 'Group',
+                'name' => 'Sekelas',
                 'value' => 1,
             ],
             [
@@ -122,6 +126,44 @@ class AdminController extends Controller
             'tipe' => $tipe,
         ]);
 
+    }
+
+    public function tambahFotoGroup( Request $request ) 
+    {
+        $validated = $request->validate([
+            'kelas' => 'required',
+            'foto_group' => 'required',
+            'type_foto' => 'required',
+        ]);
+        
+
+        if ( $validated['type_foto']  == 1 ) {
+            $store = 'photo_groups_sekelas';
+        }elseif( $validated['type_foto'] == 2 ) {
+            $store = 'photo_groups_putbu';
+        }elseif( $validated['type_foto'] == 3 ) {
+            $store = 'photo_groups_kelompok';
+        }else{
+            return redirect()->back();
+        }
+
+        $path = $request->file('foto_group')->store('public/' . $store);
+
+        PhotoGroup::create([
+            'class_id' => $validated['kelas'],
+            'photo' => $path,
+            'type_foto' => $validated['type_foto'],
+        ]);
+
+        return redirect()->back();
+    }
+
+    public function aksiHapusFotoGroup( Request $request ) 
+    {
+        $id = $request->id;
+        $foto = PhotoGroup::find($id);
+        $foto->delete();
+        return redirect()->back();
     }
 
     public function aksiTampilFotoIndividual( Request $request, $filter = 'ak' ) 

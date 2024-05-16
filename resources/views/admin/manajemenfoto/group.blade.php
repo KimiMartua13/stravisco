@@ -32,7 +32,7 @@
                       </li>
 
                       <li><a class="dropdown-item" href="/dashboard/photo/group/{{$jurusan}}/all">All</a></li>
-                      <li><a class="dropdown-item" href="/dashboard/photo/group/{{$jurusan}}/group">Group</a></li>
+                      <li><a class="dropdown-item" href="/dashboard/photo/group/{{$jurusan}}/sekelas">Sekelas</a></li>
                       <li><a class="dropdown-item" href="/dashboard/photo/group/{{$jurusan}}/putbu">Putbu</a></li>
                       <li><a class="dropdown-item" href="/dashboard/photo/group/{{$jurusan}}/kelompok">Kelompok</a></li>
                     </ul>
@@ -47,7 +47,11 @@
                         <div class="col text-center">
                             <img src="{{ Storage::url($data->photo) }}" width="250px"  alt="foto" class="mb-3">
                             <div class="d-flex gap-3 justify-content-center mb-3">
-                                <button class="btn" style="background-color: #012970; color:white;">Hapus</button>
+                                <form action="/dashboard/photo/hapus/group" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $data->id }}">
+                                    <button class="btn" style="background-color: #012970; color:white;">Hapus</button>
+                                </form>
                             </div>
                         </div>
                     @endforeach

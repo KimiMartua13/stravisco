@@ -22,6 +22,8 @@ Route::prefix('jurusan')->group(function () {
     Route::prefix('{jurusan}')->group(function () {
         Route::get('/', [JurusanController::class, 'jurusanWithName']);
         Route::get('/{kelas}', [JurusanController::class, 'aksiAmbilKelas']);
+        Route::get('/{kelas}/{filter}', [JurusanController::class, 'aksiAmbilKelas']);
+        Route::get('/{kelas}/{filter}/download', [JurusanController::class, 'aksiDownloadPDF']);
     });
 });
 
@@ -36,6 +38,8 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
         });
 
         Route::get('/tambah/group/{jurusan}', [AdminController::class, 'aksiTambahFotoGroup']);
+        Route::post('/tambah/group/aksiTambah', [AdminController::class,'tambahFotoGroup']);
+        Route::post('/hapus/group', [AdminController::class,'aksiHapusFotoGroup']);
         
         Route::prefix('individual')->group(function(){
             Route::get('/', [AdminController::class, 'aksiTampilFotoIndividual']);

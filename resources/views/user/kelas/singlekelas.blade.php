@@ -4,13 +4,18 @@
     <div class="kelas-building">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/img/gedung-tei.jpg" class="d-block w-100" alt="Gedung kelas">
-                </div>
-                @foreach ($kelas->ambilFotoKelas() as $item)
+                @foreach ($kelas->ambilFotoKelas() as $item => $value)
+                @if ( $item == 1 )
+                    <div class="carousel-item active">
+                        <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
+                    </div>
+                @else
+                
                 <div class="carousel-item">
-                    <img src="{{ Storage::url($item->photo) }}" class="d-block w-100" alt="Gedung kelas">
+                    <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
                 </div>
+
+                @endif
                 @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -36,14 +41,21 @@
             </div>
 
             <div class="row stravisco-singlekelas-item justify-content-center">
-                {{-- @foreach ($kumpulanKelas as $item)
-                <div class="col-lg-6" style="margin-bottom: 20px;">
-                    <a href="/kelas/{{ $item->getSingkatanNamaJurusan() }}/{{ $item->enkripsiId() }}">
-                        <img src="/img/DSC01090.jpg" class="img-fluid" alt="Rekayasa Perangkat Lunak">
-                        <h1>{{ $item->name }}</h1>
+                <div class="change-parent-btn d-flex justify-content-center gap-4">
+                    <a href="/jurusan/{{ $jurusan }}/{{ $hash }}/individu">
+                        <button class="change-btn {{ $filter == 'individu' ? 'active' : '' }}">Individu</button>
+                    </a>
+                    <a href="/jurusan/{{ $jurusan }}/{{ $hash }}/bts">
+                        <button class="change-btn {{ $filter == 'bts' ? 'active' : '' }}">BTS</button>
+                    </a>
+                    <a href="/jurusan/{{ $jurusan }}/{{ $hash }}/kelompok">
+                        <button class="change-btn {{ $filter == 'kelompok' ? 'active' : '' }}">Kelompok</button>
+                    </a>
+                    <a href="/jurusan/{{ $jurusan }}/{{ $hash }}/putbu">
+                        <button class="change-btn {{ $filter == 'putbu' ? 'active' : '' }}">Putih Abu</button>
                     </a>
                 </div>
-                @endforeach --}}
+
                 @foreach ($data as $item)
                 <div class="col-lg-3">
                     <img src="{{ Storage::url( $item->photo )}}" class="img-fluid gambar" alt="foto {{ $item->student_name }}">

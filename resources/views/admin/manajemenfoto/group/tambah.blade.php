@@ -3,13 +3,13 @@
 @section('main')
 <div class="row">
     <div class="col">
-        <form action="/dashboard/photo/individual/aksiTambahSiswa" method="POST" enctype="multipart/form-data">
+        <form action="/dashboard/photo/tambah/group/aksiTambah" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card info-card">
                 <div class="card-body" style="margin-top: 15px;">
                     <div class="mb-3">
                         <label for="kelas" class="form-label">Pilih kelas</label>
-                        <select class="form-select">
+                        <select class="form-select" name="kelas">
                             @foreach ($kelas as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach
@@ -17,7 +17,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="kelas" class="form-label">Pilih Tipe Foto</label>
-                        <select class="form-select">
+                        <select class="form-select" name="type_foto">
                             @foreach ($tipe as $item)
                                 <option value="{{ $item['value'] }}">{{ $item['name'] }}</option>
                             @endforeach
