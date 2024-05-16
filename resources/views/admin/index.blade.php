@@ -99,13 +99,6 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="/dashboard/classes/">
-          <i class="bi bi-houses"></i>
-          <span>Classes</span>
-        </a>
-      </li>
-
-      <li class="nav-item">
         <a class="nav-link collapsed" href="/dashboard/register/">
           <i class="bi bi-person-add"></i>
           <span>Register Account</span>
