@@ -40,7 +40,7 @@ class IndividuPhotoController extends Controller
     public function aksiMasukanFoto( Request $request ) 
     {
         try{
-            $pathJurusan = glob('D:/Kimi Martua/Photo Yearbook/*');
+            $pathJurusan = glob('E:/Davi Ardiyansyah/Photo Yearbook/*');
 
             // Mengupload 5 Foto Sekelas
             $selectedPhotoSekelas = [];
