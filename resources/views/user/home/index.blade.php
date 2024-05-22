@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-80 single-content-item stravisco-item">
+            <div class="row mt-80 single-content-item stravisco-item" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-1">
                         {{-- <img src="/img/siang2.jpg" class="img-fluid landscape" alt=""> --}}
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-80 single-content-item stravisco-item">
+            <div class="row mt-80 single-content-item stravisco-item" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-text text-custom-2">
                         <h2>Strong Determination</h2>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-80 single-content-item stravisco-item">
+            <div class="row mt-80 single-content-item stravisco-item" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-content-3">
                         {{-- <img src="/img/siang4.jpg" class="img-fluid landscape" alt=""> --}}
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-80 single-content-item stravisco-item">
+            <div class="row mt-80 single-content-item stravisco-item" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-12 col-md-6">
                     <div class="stravisco-text text-custom-4">
                         <h2>Creativity</h2>

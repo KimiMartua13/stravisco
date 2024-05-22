@@ -1,7 +1,7 @@
 @extends('user/main')
 
 @section('main')
-    <div class="kelas-building">
+    {{-- <div class="kelas-building">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($kelas->ambilFotoKelas() as $item => $value)
@@ -17,6 +17,34 @@
 
                 @endif
                 @endforeach
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div> --}}
+    <div class="jurusan-building">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/DSC01090.jpg" class="d-block w-100" alt="Thumbnail kelas">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/DSC01125.jpg" class="d-block w-100" alt="Thumbnail kelas">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/DSC01137.jpg" class="d-block w-100" alt="Thumbnail kelas">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/DSC01142.jpg" class="d-block w-100" alt="Thumbnail kelas">
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
@@ -57,7 +85,7 @@
                 </div>
 
                 @foreach ($data as $item)
-                <div class="col-lg-3">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ Storage::url( $item->photo )}}" class="img-fluid potrait" alt="foto {{ $item->student_name }}">
                     <h1>{{ $item->student_name }}</h1>
                     <p>"{{ $item->quotes }}"</p>

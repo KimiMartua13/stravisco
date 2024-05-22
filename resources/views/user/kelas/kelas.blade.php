@@ -52,7 +52,7 @@
 
             <div class="row stravisco-kelas-item justify-content-center">
                 @foreach ($kumpulanKelas as $item)
-                <div class="col-lg-6" style="margin-bottom: 20px;">
+                <div class="col-lg-6" style="margin-bottom: 20px;" data-aos="fade-up" data-aos-duration="1000">
                     <a href="/jurusan/{{ $item->getSingkatanNamaJurusan() }}/{{ $item->enkripsiId() }}">
                         <img src="{{ Storage::url($item->ambilSatuFotoKelas()->photo) }}" class="img-fluid" height="500px" alt="Foto Jurusan {{ $item->name }}">
                         <h1>{{ $item->name }}</h1>

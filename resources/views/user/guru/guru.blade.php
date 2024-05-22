@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="row stravisco-guru-photo justify-content-center">
+            <div class="row stravisco-guru-photo justify-content-center" data-aos="fade-up" data-aos-duration="1000">
                 {{-- @foreach ($kumpulanKelas as $item)
                 <div class="col-lg-6" style="margin-bottom: 20px;">
                     <a href="/kelas/{{ $item->getSingkatanNamaJurusan() }}/{{ $item->enkripsiId() }}">
@@ -46,27 +46,27 @@
                     </a>
                 </div>
                 @endforeach --}}
-                <div class="col-lg-3">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
                     <h1>Guru</h1>
                     <p>Kepala Program Keahlian</p>

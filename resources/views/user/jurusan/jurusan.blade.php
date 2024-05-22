@@ -46,7 +46,7 @@
             </div>
             <div class="row text-center stravisco-jurusan-item ">
                 @foreach ($jurusan as $item)
-                    <div class="col-lg-4 mb-4">
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
                         <a href="/jurusan/{{ $item->getSingkatanNamaJurusan() }}">
                             <img src="/img/{{ $item->getSingkatanNamaJurusan() }}-logo.png" class="img-fluid mb-2"
                                 alt="{{ $item->name }}">

@@ -23,7 +23,7 @@
         <h2>Adam Aulia Rachman</h2>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
-    
+
     <div id="gambarModalLandscape">
         <span class="tutup">&times;</span>
         <img class="modal-content-landscape" id="imgModalLandscape">
@@ -31,6 +31,10 @@
 
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

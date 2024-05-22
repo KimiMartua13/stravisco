@@ -11,6 +11,7 @@ use App\Http\Controllers\GuruController;
 
 Route::get('/', [UserController::class, 'index']);
 Route::get('/jurusan', [JurusanController::class, 'index']);
+Route::get('/about', [UserController::class, 'about']);
 Route::get('/test', function () {
     return view('user/kelas/singlekelascopy');
 });

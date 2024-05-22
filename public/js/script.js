@@ -89,6 +89,10 @@ $(document).ready(function () {
         $("#imgModalLandscape").attr("src", $(this).attr("src"));
     });
 
+    $('.tutup').click(function () {
+        $('#gambarModalLandscape').fadeOut();
+    })
+
     $("#gambarModalLandscape").click(function (e) {
         if (
             $(e.target).is("#gambarModalLandscape") ||

@@ -7,5 +7,5 @@
     rel="stylesheet">
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/landing-page.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="/js/jquery/jquery.min.js"></script>
-<script src="/js/elevatezoom/jquery.elevatezoom.js"></script>
