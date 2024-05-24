@@ -48,27 +48,27 @@
                 @endforeach --}}
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <h1>Ramdani S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <h1>Wendi Hadittia S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <h1>Deddy Maryanto</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <h1>Rivan Prasetia S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <h1>Atik Sugiyati S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
             </div>

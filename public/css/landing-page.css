@@ -246,7 +246,7 @@ a {
     margin-top: 10px;
 }
 
-.stravisco-singlekelas-item p {
+.stravisco-singlekelas-item .content {
     font-size: 13px;
     font-style: italic;
     text-decoration: underline;
@@ -374,6 +374,22 @@ a {
     cursor: pointer;
 }
 
+.information-card {
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.information-card h2 {
+    line-height: 0;
+}
+
+.information-card .col-lg-12 p {
+    max-width: 500px;
+    margin: auto;
+}
+
 .about-text {
     line-height: 1.7rem;
 }
@@ -465,17 +481,26 @@ a {
         font-size: 25px;
     }
 
-    .stravisco-singlekelas-item img {
+    .stravisco-singlekelas-item img,.stravisco-guru-photo img, .stravisco-kepsek-photo img {
         width: 300px;
     }
     .stravisco-singlekelas-item {
         margin-top: 0;
+    }
+    .information-card h2 {
+        font-size: 25px;
+    }
+    .information-card p {
+        font-size: 15px;
     }
 }
 
 @media screen and (max-width: 910px) {
     .stravisco-item h2 {
         font-size: 50px;
+    }
+    .stravisco-kepsek-photo img {
+        width: 250px;
     }
 }
 
@@ -492,14 +517,13 @@ a {
         top: -47px;
         font-size: 35px;
     }
-    .stravisco-singlekelas-item img {
+    .stravisco-singlekelas-item img, .stravisco-guru-photo img, .stravisco-kepsek-photo img {
         width: 200px;
     }
-    .stravisco-singlekelas-item h1 {
+    .stravisco-singlekelas-item h1, .stravisco-guru-photo h1, .stravisco-kepsek-photo h1 {
         font-size: 17px;
     }
-
-    .stravisco-singlekelas-item p {
+    .stravisco-singlekelas-item p, .stravisco-guru-photo p, .stravisco-kepsek-photo p {
         font-size: 13px;
     }
     .stravisco-singlekelas-item {
@@ -511,6 +535,21 @@ a {
     .we-are h4 {
         font-size: 25px;
     }
+    .about-text {
+        font-size: 15px;
+    }
+    .information-card h2 {
+        font-size: 23px;
+    }
+    .information-card p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stravisco-item .stravisco-text h2 {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -519,8 +558,8 @@ a {
     }
     .stravisco-item .stravisco-text h2 {
         left: 10px;
-        top: -40px;
-        font-size: 25px;
+        top: -30px;
+        font-size: 20px;
     }
     .stravisco-jurusan-item img {
         width: 100px;
@@ -528,17 +567,16 @@ a {
     .stravisco-jurusan-item h1 {
         font-size: 15px;
     }
-    .stravisco-singlekelas-item img {
+    .stravisco-singlekelas-item img, .stravisco-guru-photo img, .stravisco-kepsek-photo img  {
         width: 160px;
     }
-    footer {
-        font-size: 20px;
+    footer p {
+        font-size: 13px;
     }
-    .stravisco-singlekelas-item h1 {
+    .stravisco-singlekelas-item h1, .stravisco-guru-photo h1, .stravisco-kepsek-photo h1 {
         font-size: 15px;
     }
-
-    .stravisco-singlekelas-item p {
+    .stravisco-singlekelas-item p, .stravisco-guru-photo p, .stravisco-kepsek-photo p {
         font-size: 11px;
     }
     .stravisco-singlekelas-item {
@@ -549,6 +587,15 @@ a {
     }
     .we-are h4 {
         font-size: 15px;
+    }
+    .about-text {
+        font-size: 13px;
+    }
+    .information-card h2 {
+        font-size: 21px;
+    }
+    .information-card p {
+        font-size: 13px;
     }
 }
 

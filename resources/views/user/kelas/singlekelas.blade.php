@@ -86,9 +86,9 @@
 
                 @foreach ($data as $item)
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid potrait" alt="foto {{ $item->student_name }}">
+                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid {{ $filter == 'individu' ? 'modalIndividu' : 'modalLain' }}" id="coba" alt="foto {{ $item->student_name }}">
                     <h1>{{ $item->student_name }}</h1>
-                    <p>"{{ $item->quotes }}"</p>
+                    <p class="quotes-student">"{{ $item->quotes }}"</p>
                 </div>
                 @endforeach
             </div>
