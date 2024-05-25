@@ -5,7 +5,7 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($kelas->ambilFotoKelas() as $item => $value)
-                @if ( $item == 1 )
+                @if ($item == 1)
                     <div class="carousel-item active">
                         <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
                     </div>
@@ -85,14 +85,16 @@
                 </div>
 
                 @foreach ($data as $item)
-                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid {{ $filter == 'individu' ? 'modalIndividu' : 'modalLain' }}" id="coba" alt="foto {{ $item->student_name }}">
-                    <h1>{{ $item->student_name }}</h1>
-                    <p class="quotes-student">"{{ $item->quotes }}"</p>
-                </div>
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="{{ Storage::url($item->photo) }}"
+                            class="img-fluid {{ $filter == 'individu' ? 'modalIndividu' : 'modalLain' }}"
+                            data-name="{{ $item->student_name }}" data-quotes="{{ $item->quotes }}"
+                            alt="foto {{ $item->student_name }}">
+                        <h1 class="student-name">{{ $item->student_name }}</h1>
+                        <p class="quotes-student" data-fullquote="{{ $item->quotes }}">"{{ $item->quotes }}"</p>
+                    </div>
                 @endforeach
             </div>
         </div>
     </div>
-    
 @endsection

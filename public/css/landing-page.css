@@ -374,18 +374,18 @@ a {
     cursor: pointer;
 }
 
-.information-card {
+#information-card {
     color: #fff;
     justify-content: center;
     text-align: center;
     padding-bottom: 3rem;
 }
 
-.information-card h2 {
+#information-card h2 {
     line-height: 0;
 }
 
-.information-card .col-lg-12 p {
+#information-card .col-lg-12 p {
     max-width: 500px;
     margin: auto;
 }
@@ -487,10 +487,10 @@ a {
     .stravisco-singlekelas-item {
         margin-top: 0;
     }
-    .information-card h2 {
+    #information-card h2 {
         font-size: 25px;
     }
-    .information-card p {
+    #information-card p {
         font-size: 15px;
     }
 }
@@ -538,10 +538,10 @@ a {
     .about-text {
         font-size: 15px;
     }
-    .information-card h2 {
+    #information-card h2 {
         font-size: 23px;
     }
-    .information-card p {
+    #information-card p {
         font-size: 14px;
     }
 }
@@ -591,10 +591,10 @@ a {
     .about-text {
         font-size: 13px;
     }
-    .information-card h2 {
+    #information-card h2 {
         font-size: 21px;
     }
-    .information-card p {
+    #information-card p {
         font-size: 13px;
     }
 }

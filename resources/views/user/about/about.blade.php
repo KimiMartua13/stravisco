@@ -38,7 +38,7 @@
 
             <div class="row stravisco-kepsek-photo justify-content-center">
                 <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="/img/B.AGUS_WIMBADI__M.Pd.png" class="img-fluid potrait" alt="Kepala Sekolah">
+                    <img src="/img/B.AGUS_WIMBADI__M.Pd.png" class="img-fluid potrait" data-name="B. Agus Wimbadi M.Pd" data-position="Kepala Sekolah SMKN 2 Kota Bekasi" alt="Kepala Sekolah">
                     <h1>B. AGUS WIMBADI, M.Pd.</h1>
                     <p>Kepala Sekolah SMKN 2 Kota Bekasi</p>
                 </div>
