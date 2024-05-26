@@ -6,7 +6,7 @@
             <div class="carousel-inner">
                 @foreach ($kelas->ambilFotoKelas() as $item => $value)
                 @if ( $item == 1 )
-                    <div class="carousel-item active">
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                         <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
                     </div>
                 @else
@@ -86,9 +86,11 @@
 
                 @foreach ($data as $item)
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid potrait" alt="foto {{ $item->student_name }}">
-                    <h1>{{ $item->student_name }}</h1>
-                    <p>"{{ $item->quotes }}"</p>
+                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid potrait" loading="lazy" alt="foto {{ $item->student_name }}">
+                    @if ( $filter == 'individu' )
+                        <h1>{{ $item->student_name }}</h1>
+                        <p>"{{ $item->quotes }}"</p>
+                    @endif
                 </div>
                 @endforeach
             </div>

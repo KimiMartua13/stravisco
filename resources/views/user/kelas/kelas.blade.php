@@ -4,18 +4,11 @@
     <div class="jurusan-building">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/img/DSC01090.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/DSC01125.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/DSC01137.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/DSC01142.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
+                @foreach ($fotoKumpulanKelas as $item)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }} ">
+                        <img src="{{ Storage::url($item->photo) }}" class="d-block w-100" height="500px" alt="Thumbnail kelas">
+                    </div>
+                @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">

@@ -38,7 +38,11 @@ class Controller extends BaseController
     {
         $string = str_replace(['.', '_'], '', $string);
         
+        $string = preg_replace('/^\d+[\.\s]*/', '', $string);
+        
         $string = preg_replace('/[^a-zA-Z0-9\s]/', '', $string);
+
+        $string = preg_replace('/[^a-zA-Z\s]/', '', $string);
         
         $string = trim($string);
         

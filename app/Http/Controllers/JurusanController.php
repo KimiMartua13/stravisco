@@ -20,10 +20,17 @@ class JurusanController extends Controller
 
         $jurusan = MasterClass::where('id',$idJurusan)->first();
         $kumpulanKelas = MasterClass::where('id', 'like',  $idJurusan . '__.')->get();
-    
+        
+        $kumpulanFoto = [];
+
+        foreach ($kumpulanKelas as $key) {
+            $kumpulanFoto [] = PhotoGroup::where('class_id', '=', $key->id)->where('type_foto', 1)->first();
+        }
+        
         return view('user.kelas.kelas', [
             'jurusan' => $jurusan->name,
             'kumpulanKelas' => $kumpulanKelas,
+            'fotoKumpulanKelas' => $kumpulanFoto,
         ]);
     }
 

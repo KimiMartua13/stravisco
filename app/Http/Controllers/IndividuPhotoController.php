@@ -7,10 +7,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\PhotoGroup;
 
+use App\Services\ExcelImportService;
+
 use App\Models\MasterStudent;
 
 class IndividuPhotoController extends Controller
 {
+
+    protected $excelImportService;
+
+    public function __construct(ExcelImportService $excelImportService)
+    {
+        $this->excelImportService = $excelImportService;
+    }
+
     public function aksiMasukanFotoIndividu( Request $request, $jurusan, $kelas )
     {
         $imagePath = glob('D:/Kimi Martua/Photo Yearbook/' . $jurusan .'/' . $kelas . '/individu/*');
@@ -40,7 +50,8 @@ class IndividuPhotoController extends Controller
     public function aksiMasukanFoto( Request $request ) 
     {
         try{
-            $pathJurusan = glob('E:/Davi Ardiyansyah/Photo Yearbook/*');
+            ini_set('max_execution_time', '0');
+            $pathJurusan = glob('D:/Kimi Martua/Photo Yearbook/*');
 
             // Mengupload 5 Foto Sekelas
             $selectedPhotoSekelas = [];
@@ -87,9 +98,8 @@ class IndividuPhotoController extends Controller
             }
 
 
-
             // // Mengupload 5 Foto Putbu
-            $selectedPhotoPutbu = null;
+            $selectedPhotoPutbu = [];
             foreach ($pathJurusan as $key) {
                 $pathKelas = glob( $key . '/*' );
                 foreach ($pathKelas as $keyKelas) {
@@ -136,7 +146,7 @@ class IndividuPhotoController extends Controller
 
 
             // // Mengupload 5 Foto Kelompok
-            $selectedPhotoKelompok = null;
+            $selectedPhotoKelompok = [];
             foreach ($pathJurusan as $key) {
                 $pathKelas = glob( $key . '/*' );
                 foreach ($pathKelas as $keyKelas) {
@@ -182,7 +192,7 @@ class IndividuPhotoController extends Controller
 
 
             // Mengupload Foto Individu
-            $dataIndividu = null;
+            $dataIndividu = [];
             foreach ($pathJurusan as $key) {
                 $pathKelas = glob( $key . '/*' );
                     foreach ($pathKelas as $keyKelas) {
@@ -218,6 +228,12 @@ class IndividuPhotoController extends Controller
         } catch(\Exception $exception) {
             dd($exception);
         }
+    }
+
+    public function aksiMasukanQuotes( Request $request ) 
+    {
+        ini_set('max_execution_time', '0');
+        $this->excelImportService->import();
     }
 
     public function cekKelas( $kelas ) 
