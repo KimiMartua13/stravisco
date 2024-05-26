@@ -47,28 +47,28 @@
                 </div>
                 @endforeach --}}
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <img src="/img/adam.jpg" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
+                    <h1>Ramdani S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <img src="/img/adam.jpg" class="img-fluid potrait" data-name="Wendi Hadittia S.Kom" data-position="Kepala Program Keahlian" alt="">
+                    <h1>Wendi Hadittia S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <img src="/img/adam.jpg" class="img-fluid potrait" data-name="Deddy Maryanto S.Kom" data-position="Kepala Program Keahlian" alt="">
+                    <h1>Deddy Maryanto S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <img src="/img/adam.jpg" class="img-fluid potrait" data-name="Rivan Prasetia S.Kom" data-position="Kepala Program Keahlian" alt="">
+                    <h1>Rivan Prasetia S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="/img/adam.jpg" class="img-fluid potrait" alt="">
-                    <h1>Guru</h1>
+                    <img src="/img/adam.jpg" class="img-fluid potrait" data-name="Atik Sugiyati S.Kom" data-position="Kepala Program Keahlian" alt="">
+                    <h1>Atik Sugiyati S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>
             </div>

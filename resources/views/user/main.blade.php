@@ -20,9 +20,20 @@
     <div id="gambarModalPotrait">
         <span class="tutup">&times;</span>
         <img class="modal-content-potrait" id="imgModalPotrait">
-        <h2>Adam Aulia Rachman</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div id="information-card">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2 id="modalStudentName"></h2>
+                    <br>
+                </div>
+                <div class="col-lg-12">
+                    <p id="modalStudentQuotes"></p>
+                    <p class="read-more mt-2"><a href="#" class="read-more-link">Read more</a></p>
+                </div>
+            </div>
+        </div>
     </div>
+    
 
     <div id="gambarModalLandscape">
         <span class="tutup">&times;</span>
