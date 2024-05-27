@@ -328,4 +328,11 @@ class AdminController extends Controller
         $siswa->delete();
         return back()->with('msg', 'Berhasil Dihapus');
     }
+
+    public function aksiTampilGuru( Request $request ) 
+    {
+        return view('admin.guru.index', [
+            'title' => 'Teachers'
+        ]);
+    }
 }

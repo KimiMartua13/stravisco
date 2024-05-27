@@ -57,6 +57,10 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
         });
     });
 
+    Route::prefix('teachers')->group(function(){
+        Route::get('/', [AdminController::class, 'aksiTampilGuru']);
+    });
+
     Route::prefix('register')->group(function(){
         Route::get('/', [AdminController::class, 'aksiTampilRegister']);
         Route::post('/aksiRegister', [AdminController::class, 'aksiRegisterUser']);

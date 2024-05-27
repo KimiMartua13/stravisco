@@ -97,7 +97,12 @@
           </li>
         </ul>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/dashboard/teachers/">
+          <i class="bi bi-person-badge"></i>
+          <span>Teachers</span>
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="/dashboard/register/">
           <i class="bi bi-person-add"></i>

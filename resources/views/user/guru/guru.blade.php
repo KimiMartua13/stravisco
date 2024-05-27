@@ -47,7 +47,7 @@
                 </div>
                 @endforeach --}}
                 <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="/img/adam.jpg" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
+                    <img src="/img/RAMDANI,S.Kom.jpg" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
                     <h1>Ramdani S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
                 </div>

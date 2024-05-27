@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\MasterClass;
 use App\Models\User;
+use App\Models\MasterTeacher;
 
 class DatabaseSeeder extends Seeder
 {
@@ -172,6 +173,12 @@ class DatabaseSeeder extends Seeder
         MasterClass::create([
             'id' => '01.06.04.',
             'name' => 'Teknik Komputer Dan Jaringan | IconNet',
+        ]);
+
+        MasterTeacher::create([
+            'id' => '01.',
+            'teacher_name' => 'WIMBADI',
+            'teacher_description' => 'KEpala Sekolah'
         ]);
 
         // User::factory(10)->create();

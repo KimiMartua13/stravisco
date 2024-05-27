@@ -88,26 +88,23 @@
                         <button class="change-btn {{ $filter == 'putbu' ? 'active' : '' }}">Putih Abu</button>
                     </a>
                 </div>
-
-                @foreach ($data as $item)
-<<<<<<< HEAD
-                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="{{ Storage::url( $item->photo )}}" class="img-fluid potrait" loading="lazy" alt="foto {{ $item->student_name }}">
-                    @if ( $filter == 'individu' )
-                        <h1>{{ $item->student_name }}</h1>
-                        <p>"{{ $item->quotes }}"</p>
-                    @endif
+                @if ($is_null == true)
+                <div class="kosong">
+                    
                 </div>
-=======
+                @endif
+                @foreach ($data as $item)
+                    
                     <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                         <img src="{{ Storage::url($item->photo) }}"
                             class="img-fluid {{ $filter == 'individu' ? 'modalIndividu' : 'modalLain' }}"
                             data-name="{{ $item->student_name }}" data-quotes="{{ $item->quotes }}"
                             alt="foto {{ $item->student_name }}">
+                        @if ( $filter == 'individu' ) 
                         <h1 class="student-name">{{ $item->student_name }}</h1>
                         <p class="quotes-student" data-fullquote="{{ $item->quotes }}">"{{ $item->quotes }}"</p>
+                        @endif
                     </div>
->>>>>>> f978f38ac320268ed9b90e6e1f4f7e8ab2c1ce22
                 @endforeach
             </div>
         </div>

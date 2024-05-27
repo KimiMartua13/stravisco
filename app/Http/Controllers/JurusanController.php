@@ -65,12 +65,19 @@ class JurusanController extends Controller
 
         $data = $data->get();
 
+        $isData = $data->toArray();
+        $is_null = false;
+        if( $isData == [] ){
+            $is_null = true;
+        }
+
         return view('user.kelas.singlekelas', [
             'kelas' => $kelas,
             'data' => $data,
             'hash' => $crypt,
             'jurusan' => $jurusan,
             'filter' => $filter,
+            'is_null' => $is_null,
         ]);
     }
 
