@@ -223,7 +223,10 @@ $(document).ready(function () {
             ) {
                 $(this).fadeOut();
                 $("#imgModalLandscape").css("transform", "scale(1)");
-                $("#imgModalLandscape").css("transform-origin", "center center");
+                $("#imgModalLandscape").css(
+                    "transform-origin",
+                    "center center"
+                );
                 isZoomed = false;
             }
         });
@@ -264,7 +267,6 @@ $(document).ready(function () {
         $("#gambarModalPotrait").fadeIn();
         $("#imgModalPotrait").attr("src", $(this).attr("src"));
     });
-
 
     $(".tutup").click(function () {
         $("#gambarModalPotrait").fadeOut();

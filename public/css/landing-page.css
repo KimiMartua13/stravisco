@@ -342,6 +342,10 @@ a {
     text-align: center;
 }
 
+#gambarModalPotrait {
+    overflow-x: hidden;
+}
+
 #gambarModalPotrait .modal-content-potrait {
     margin: 3rem auto 3rem auto;
     display: flex;
@@ -390,8 +394,78 @@ a {
     margin: auto;
 }
 
+#information-card .read-more {
+    color: #0d6efd;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .about-text {
     line-height: 1.7rem;
+}
+
+
+/* Opsi 1 */
+
+.stravisco-quotes-foryou {
+    text-align: center;
+    color: #fff;
+}
+
+.stravisco-quotes-foryou .quotes-title h2 {
+    font-size: 50px;
+}
+
+.quotes-for-you img {
+    width: 70%;
+    border-radius: 10px 30px 10px 30px;
+    -webkit-border-radius: 10px 30px 10px 30px;
+    -moz-border-radius: 10px 30px 10px 30px;
+    -ms-border-radius: 10px 30px 10px 30px;
+    -o-border-radius: 10px 30px 10px 30px;
+    border: 1px solid #000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.075) !important;
+    margin-top: 20px;
+}
+
+.quotes-for-you h1 {
+    font-size: 30px;
+    font-weight: bold;
+    /* color: #000; */
+    margin-top: 10px;
+}
+
+.quotes-for-you p {
+    font-size: 18px;
+}
+
+/* Opsi 2 */
+
+/* .stravisco-quotes-foryou .quotes-title h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.quotes-for-you img {
+    width: 300px;
+    border-radius: 10px 30px 10px 30px;
+    -webkit-border-radius: 10px 30px 10px 30px;
+    -moz-border-radius: 10px 30px 10px 30px;
+    -ms-border-radius: 10px 30px 10px 30px;
+    -o-border-radius: 10px 30px 10px 30px;
+    border: 1px solid #000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.075) !important;
+    margin-top: 20px;
+}
+
+.quotes-for-you h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+} */
+
+svg {
+    margin-bottom: -2px;
 }
 
 /* Animation */
@@ -550,6 +624,21 @@ a {
     .stravisco-item .stravisco-text h2 {
         font-size: 25px;
     }
+    .change-parent-btn button {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .change-parent-btn button {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .change-parent-btn button {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -591,11 +680,20 @@ a {
     .about-text {
         font-size: 13px;
     }
+    .kelas-title h1 {
+        font-size: 20px;
+    }
     #information-card h2 {
         font-size: 21px;
     }
     #information-card p {
         font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .change-parent-btn button {
+        font-size: 10px;
     }
 }
 

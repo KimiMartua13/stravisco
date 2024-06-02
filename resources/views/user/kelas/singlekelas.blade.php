@@ -89,8 +89,8 @@
                     </a>
                 </div>
                 @if ($is_null == true)
-                <div class="kosong">
-                    
+                <div class="kosong mt-5">
+                    <p>Unavailable photos.</p>
                 </div>
                 @endif
                 @foreach ($data as $item)
