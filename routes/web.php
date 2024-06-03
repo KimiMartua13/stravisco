@@ -70,11 +70,14 @@ Route::prefix('dashboard')->middleware('auth')->group( function(){
 
 Route::get('masukanfoto/', [IndividuPhotoController::class, 'aksiMasukanFoto']);
 Route::get('masukanquotes', [IndividuPhotoController::class , 'aksiMasukanQuotes']);
+Route::get('masukanguru', [IndividuPhotoController::class, 'aksiMasukanGuru']);
+Route::get('membuatpdf', [IndividuPhotoController::class , 'aksiMembuatPDF']);
 
 Route::prefix('login')->middleware('guest')->group(function () {
     Route::get('/', [AdminController::class, 'aksiTampilLogin'])->name('login');
     Route::post('/aksiLogin', [AdminController::class, 'aksiLoginAplikasi']);
 });
+
 
 
 

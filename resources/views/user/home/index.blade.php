@@ -93,10 +93,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row quotes-for-you justify-content-center">
+            {{-- <div class="row quotes-for-you justify-content-center">
                 <div class="col-lg-4">
                     <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique modi beatae id nulla tenetur magni, mollitia sit ea recusandae inventore doloremque voluptatum aliquam corrupti, aperiam eveniet. Excepturi veniam natus similique.</p>
                     <p>- Adam Aulia -</p>
+                </div>
+            </div> --}}
+            <div class="row quotes-for-you justify-content-center">
+                <div class="col-lg-4">
+                    <p class="mt-5">{{ $quote->quotes }}</p>
+                    <p>- {{ $quote->student_name }} -</p>
                 </div>
             </div>
         </div>

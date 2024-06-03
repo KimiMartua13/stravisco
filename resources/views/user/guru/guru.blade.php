@@ -38,6 +38,21 @@
             </div>
 
             <div class="row stravisco-guru-photo justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+                @foreach ( $guru as $key => $item )
+                    @if ( $key <= 5 )
+                        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="{{ Storage::url($item->photo) }}" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
+                            <h1> {{ $item->teacher_name }} </h1>
+                            <p> {{ $item->teacher_description }} SMKN 2 Kota Bekasi</p>
+                        </div>
+                    @else
+                        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="{{ Storage::url($item->photo) }}" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
+                            <h1> {{ $item->teacher_name }} </h1>
+                            <p> Wali Kelas {{ $item->teacher_description }} </p>
+                        </div>
+                    @endif
+                @endforeach
                 {{-- @foreach ($kumpulanKelas as $item)
                 <div class="col-lg-6" style="margin-bottom: 20px;">
                     <a href="/kelas/{{ $item->getSingkatanNamaJurusan() }}/{{ $item->enkripsiId() }}">
@@ -46,7 +61,7 @@
                     </a>
                 </div>
                 @endforeach --}}
-                <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                {{-- <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/img/RAMDANI,S.Kom.jpg" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
                     <h1>Ramdani S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
@@ -70,7 +85,7 @@
                     <img src="/img/adam.jpg" class="img-fluid potrait" data-name="Atik Sugiyati S.Kom" data-position="Kepala Program Keahlian" alt="">
                     <h1>Atik Sugiyati S.Kom</h1>
                     <p>Kepala Program Keahlian</p>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
