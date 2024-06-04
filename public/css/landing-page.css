@@ -253,12 +253,14 @@ a {
     color: #000;
 }
 
-.stravisco-guru-photo, .stravisco-kepsek-photo {
+.stravisco-guru-photo,
+.stravisco-kepsek-photo {
     margin-top: 50px;
     text-align: center;
 }
 
-.stravisco-guru-photo .col-lg-3, .stravisco-kepsek-photo .col-lg-3 {
+.stravisco-guru-photo .col-lg-3,
+.stravisco-kepsek-photo .col-lg-3 {
     margin-top: 40px;
 }
 
@@ -283,7 +285,8 @@ a {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.075) !important;
 }
 
-.stravisco-guru-photo h1, .stravisco-kepsek-photo h1 {
+.stravisco-guru-photo h1,
+.stravisco-kepsek-photo h1 {
     font-size: 20px;
     font-weight: bold;
     color: #000;
@@ -404,7 +407,6 @@ a {
     line-height: 1.7rem;
 }
 
-
 /* Opsi 1 */
 
 .stravisco-quotes-foryou {
@@ -464,8 +466,12 @@ a {
     color: #000;
 } */
 
-svg {
+.waves-up {
     margin-bottom: -2px;
+}
+
+.waves-down {
+    margin-top: -2px;
 }
 
 /* Animation */
@@ -526,7 +532,6 @@ svg {
     right: 10px;
 } */
 
-
 /* Flex */
 @media screen and (max-width: 991px) {
     .stravisco-jurusan-item {
@@ -546,6 +551,12 @@ svg {
         width: 70%;
     }
 
+    .stravisco-item .stravisco-text h2 {
+        left: 10px;
+        top: -47px;
+        font-size: 50px;
+    }
+
     .kelas-title,
     .guru-title {
         margin-top: 30px;
@@ -555,7 +566,9 @@ svg {
         font-size: 25px;
     }
 
-    .stravisco-singlekelas-item img,.stravisco-guru-photo img, .stravisco-kepsek-photo img {
+    .stravisco-singlekelas-item img,
+    .stravisco-guru-photo img,
+    .stravisco-kepsek-photo img {
         width: 300px;
     }
     .stravisco-singlekelas-item {
@@ -591,13 +604,19 @@ svg {
         top: -47px;
         font-size: 35px;
     }
-    .stravisco-singlekelas-item img, .stravisco-guru-photo img, .stravisco-kepsek-photo img {
+    .stravisco-singlekelas-item img,
+    .stravisco-guru-photo img,
+    .stravisco-kepsek-photo img {
         width: 200px;
     }
-    .stravisco-singlekelas-item h1, .stravisco-guru-photo h1, .stravisco-kepsek-photo h1 {
+    .stravisco-singlekelas-item h1,
+    .stravisco-guru-photo h1,
+    .stravisco-kepsek-photo h1 {
         font-size: 17px;
     }
-    .stravisco-singlekelas-item p, .stravisco-guru-photo p, .stravisco-kepsek-photo p {
+    .stravisco-singlekelas-item p,
+    .stravisco-guru-photo p,
+    .stravisco-kepsek-photo p {
         font-size: 13px;
     }
     .stravisco-singlekelas-item {
@@ -618,6 +637,12 @@ svg {
     #information-card p {
         font-size: 14px;
     }
+    .stravisco-quotes-foryou .quotes-title h2 {
+        font-size: 40px;
+    }
+    .quotes-for-you p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -626,6 +651,12 @@ svg {
     }
     .change-parent-btn button {
         font-size: 15px;
+    }
+    .stravisco-quotes-foryou .quotes-title h2 {
+        font-size: 30px;
+    }
+    .quotes-for-you p {
+        font-size: 14px;
     }
 }
 
@@ -643,7 +674,7 @@ svg {
 
 @media screen and (max-width: 340px) {
     .stravisco-area .stravisco-title h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
     .stravisco-item .stravisco-text h2 {
         left: 10px;
@@ -656,16 +687,22 @@ svg {
     .stravisco-jurusan-item h1 {
         font-size: 15px;
     }
-    .stravisco-singlekelas-item img, .stravisco-guru-photo img, .stravisco-kepsek-photo img  {
+    .stravisco-singlekelas-item img,
+    .stravisco-guru-photo img,
+    .stravisco-kepsek-photo img {
         width: 160px;
     }
     footer p {
         font-size: 13px;
     }
-    .stravisco-singlekelas-item h1, .stravisco-guru-photo h1, .stravisco-kepsek-photo h1 {
+    .stravisco-singlekelas-item h1,
+    .stravisco-guru-photo h1,
+    .stravisco-kepsek-photo h1 {
         font-size: 15px;
     }
-    .stravisco-singlekelas-item p, .stravisco-guru-photo p, .stravisco-kepsek-photo p {
+    .stravisco-singlekelas-item p,
+    .stravisco-guru-photo p,
+    .stravisco-kepsek-photo p {
         font-size: 11px;
     }
     .stravisco-singlekelas-item {
@@ -688,6 +725,12 @@ svg {
     }
     #information-card p {
         font-size: 13px;
+    }
+    .stravisco-quotes-foryou .quotes-title h2 {
+        font-size: 25px;
+    }
+    .quotes-for-you p {
+        font-size: 12px;
     }
 }
 
@@ -746,13 +789,20 @@ svg {
 
 @media (max-width: 991.98px) {
     .navbar {
-        padding: 15px;
+        padding: 20px;
+        background: transparent;
+        position: absolute;
+        width: 100%;
+    }
+
+    .navbar.nav-sticky {
+        padding: 5px 20px;
         background: #000 !important;
     }
 
     .navbar .navbar-brand {
         color: #fff;
-        font-size: 30px;
+        font-size: 27px;
     }
 
     .navbar .navbar-toggler {
@@ -766,40 +816,4 @@ svg {
         font-size: 15px;
         font-weight: 500;
     }
-}
-
-/* .single-stravisco-item .backend-content h2 {
-    font-size: ;
-} */
-
-/* .single-stravisco-item.stravisco-item-1 .backend-content h2 {
-    right: auto;
-    left: 40%;
-} */
-
-/* .stravisco-area .liberation h2::after {
-    content: "";
-    position: absolute;
-    background-color: #ddd8d8;
-    height: 3px;
-    width: 0%;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-}
-
-.stravisco-area .liberation h2:hover {
-    color: #c0baba;
-}
-
-.stravisco-area .liberation h2:hover::after {
-    color: #c0baba;
-    width: 100%;
-} */
-
-@media only screen and (max-width: 767px) {
 }

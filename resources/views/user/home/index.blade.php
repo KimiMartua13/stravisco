@@ -83,7 +83,7 @@
     </div> --}}
 
     <!-- Quotes for you Start -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#212529" fill-opacity="1" d="M0,160L180,192L360,160L540,160L720,224L900,160L1080,128L1260,160L1440,192L1440,320L1260,320L1080,320L900,320L720,320L540,320L360,320L180,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="waves-up"><path fill="#212529" fill-opacity="1" d="M0,160L180,192L360,160L540,160L720,224L900,160L1080,128L1260,160L1440,192L1440,320L1260,320L1080,320L900,320L720,320L540,320L360,320L180,320L0,320Z"></path></svg>
     <div class="stravisco-quotes-foryou bg-dark">
         <div class="container-fluid">
             <div class="row">
@@ -94,13 +94,13 @@
                 </div>
             </div>
             <div class="row quotes-for-you justify-content-center">
-                <div class="col-lg-4">
-                    <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique modi beatae id nulla tenetur magni, mollitia sit ea recusandae inventore doloremque voluptatum aliquam corrupti, aperiam eveniet. Excepturi veniam natus similique.</p>
+                <div class="col-lg-6">
+                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique modi beatae id nulla tenetur magni, mollitia sit ea recusandae inventore doloremque voluptatum aliquam corrupti, aperiam eveniet. Excepturi veniam natus similique.</p>
                     <p>- Adam Aulia -</p>
                 </div>
             </div>
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#212529" fill-opacity="1" d="M0,192L180,288L360,256L540,320L720,160L900,320L1080,160L1260,288L1440,128L1440,0L1260,0L1080,0L900,0L720,0L540,0L360,0L180,0L0,0Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="waves-down"><path fill="#212529" fill-opacity="1" d="M0,192L180,288L360,256L540,320L720,160L900,320L1080,160L1260,288L1440,128L1440,0L1260,0L1080,0L900,0L720,0L540,0L360,0L180,0L0,0Z"></path></svg>
     <!-- Quotes for you End -->
 @endsection
