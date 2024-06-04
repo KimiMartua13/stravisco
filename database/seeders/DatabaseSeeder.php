@@ -175,11 +175,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'Teknik Komputer Dan Jaringan | IconNet',
         ]);
 
-        MasterTeacher::create([
-            'id' => '01.',
-            'teacher_name' => 'WIMBADI',
-            'teacher_description' => 'KEpala Sekolah'
-        ]);
 
         // User::factory(10)->create();
     }

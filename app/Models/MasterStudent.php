@@ -27,4 +27,5 @@ class MasterStudent extends Model
     {
         return Hashids::encode($this->id);
     }
+    
 }

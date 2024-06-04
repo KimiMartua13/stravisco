@@ -14,9 +14,10 @@ class CreateMasterTeachersTable extends Migration
     public function up()
     {
         Schema::create('master_teachers', function (Blueprint $table) {
-            $table->string('id_guru')->primary();
+            $table->id();
             $table->string('teacher_name');
             $table->string('teacher_description');
+            $table->string('photo');
             $table->timestamps();
         });
     }

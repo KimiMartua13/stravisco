@@ -16,7 +16,7 @@ class CreateMasterStudentsTable extends Migration
         Schema::create('master_students', function (Blueprint $table) {
             $table->id();
             $table->string('student_name');
-            $table->string('quotes');
+            $table->longText('quotes');
             $table->string('photo');
             $table->string('class_id');
             $table->timestamps();

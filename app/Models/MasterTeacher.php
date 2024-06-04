@@ -9,8 +9,8 @@ class MasterTeacher extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id_guru',
         'teacher_name',
         'teacher_description',
+        'photo',
     ];
 }

@@ -40,6 +40,8 @@ class JurusanController extends Controller
         ->where('id', 'NOT LIKE', '__.__.__')
         ->get();
 
+        
+
         return view('user.jurusan.jurusan', [
             'jurusan' => $jurusan,
         ]);
