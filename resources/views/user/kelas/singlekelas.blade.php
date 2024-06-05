@@ -5,7 +5,6 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($kelas->ambilFotoKelas() as $item => $value)
-<<<<<<< HEAD
                     @if ($item == 1)
                         <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                             <img src="{{ Storage::url($value->photo) }}" class="d-block w-100 landscape" alt="Gedung kelas">
@@ -14,18 +13,6 @@
                         <div class="carousel-item">
                             <img src="{{ Storage::url($value->photo) }}" class="d-block w-100 landscape" alt="Gedung kelas">
                         </div>
-=======
-                    @if ( $item == 1 )
-                        <div class="carousel-item active">
-                            <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
-                        </div>
-                    @else
-                    
-                    <div class="carousel-item">
-                        <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
-                    </div>
-
->>>>>>> 45797ab91e968642dc7001a3dfc21eb009781931
                     @endif
                 @endforeach
             </div>
@@ -41,37 +28,6 @@
             </button>
         </div>
     </div>
-<<<<<<< HEAD
-=======
-    {{-- <div class="jurusan-building">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/img/DSC01090.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/DSC01125.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/DSC01137.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/DSC01142.jpg" class="d-block w-100" alt="Thumbnail kelas">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div> --}}
->>>>>>> 45797ab91e968642dc7001a3dfc21eb009781931
     <div id="stravisco-singlekelas">
         <div class="container">
             <div class="row">
