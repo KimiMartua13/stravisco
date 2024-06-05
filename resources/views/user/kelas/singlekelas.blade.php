@@ -5,14 +5,16 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($kelas->ambilFotoKelas() as $item => $value)
-                    @if ($item == 1)
-                        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                            <img src="{{ Storage::url($value->photo) }}" class="d-block w-100 landscape" alt="Gedung kelas">
+                    @if ( $item == 1 )
+                        <div class="carousel-item active">
+                            <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
                         </div>
                     @else
-                        <div class="carousel-item">
-                            <img src="{{ Storage::url($value->photo) }}" class="d-block w-100 landscape" alt="Gedung kelas">
-                        </div>
+                    
+                    <div class="carousel-item">
+                        <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
+                    </div>
+
                     @endif
                 @endforeach
             </div>
@@ -64,11 +66,6 @@
                             class="img-fluid {{ $filter == 'individu' ? 'modalIndividu' : 'modalLain' }}"
                             data-name="{{ $item->student_name }}" data-quotes="{{ $item->quotes == 'Dummy' ?  'No Quote' : $item->quotes }}" data-
                             alt="foto {{ $item->student_name }}">
-<<<<<<< HEAD
-                        @if ($filter == 'individu')
-                            <h1 class="student-name">{{ $item->student_name }}</h1>
-                            <p class="quotes-student" data-fullquote="{{ $item->quotes }}">"{{ $item->quotes }}"</p>
-=======
                         @if ( $filter == 'individu' ) 
                         <h1 class="student-name">{{ $item->student_name }}</h1>
                         @if ( $item->quotes == 'Dummy' )
@@ -76,7 +73,6 @@
                         @else
                             <p class="quotes-student" data-fullquote="{{ $item->quotes }}">"{{ $item->quotes }}"</p>
                         @endif
->>>>>>> 45797ab91e968642dc7001a3dfc21eb009781931
                         @endif
                     </div>
                 @endforeach
