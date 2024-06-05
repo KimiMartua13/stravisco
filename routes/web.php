@@ -30,6 +30,7 @@ Route::prefix('jurusan')->group(function () {
 
 Route::prefix('dashboard')->middleware('auth')->group( function(){
     Route::get('/', [AdminController::class, 'index']);
+    Route::get('/logout', [AdminController::class, 'aksiLogoutAplikasi']);
     Route::prefix('photo')->group(function () {
         // Route::get('group', [AdminController::class, 'aksiTampilFotoGroup']);
         Route::prefix('group')->group(function () {
@@ -76,6 +77,15 @@ Route::get('membuatpdf', [IndividuPhotoController::class , 'aksiMembuatPDF']);
 Route::prefix('login')->middleware('guest')->group(function () {
     Route::get('/', [AdminController::class, 'aksiTampilLogin'])->name('login');
     Route::post('/aksiLogin', [AdminController::class, 'aksiLoginAplikasi']);
+});
+
+Route::get('generate', function (){
+	$route = explode('/', $_SERVER['DOCUMENT_ROOT']);
+	$targetFolder = '/' . $route[1] . '/' . $route[2] . '/' . $route[3] . '/' . 'stravisco/storage/app/public';
+	$linkFolder = $_SERVER['DOCUMENT_ROOT'].'/storage';
+
+    symlink($targetFolder,$linkFolder);
+    echo 'Symlink completed';
 });
 
 

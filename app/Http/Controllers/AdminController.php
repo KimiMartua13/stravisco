@@ -35,6 +35,17 @@ class AdminController extends Controller
         ]);
     }
 
+    public function aksiLogoutAplikasi( Request $request ) 
+    {
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect('/');
+    }
+
     public function aksiTampilFotoGroup( Request $request , $jurusan = 'ak' , $filter = 'all') 
     {
         $fotoGroup = PhotoGroup::leftJoin('master_classes', 'photo_groups.class_id', '=', 'master_classes.id')
