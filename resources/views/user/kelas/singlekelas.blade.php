@@ -1,26 +1,21 @@
 @extends('user/main')
 
 @section('main')
-    {{-- <div class="kelas-building">
+    <div class="kelas-building">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($kelas->ambilFotoKelas() as $item => $value)
-<<<<<<< HEAD
-                @if ( $item == 1 )
-                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-=======
-                @if ($item == 1)
-                    <div class="carousel-item active">
->>>>>>> f978f38ac320268ed9b90e6e1f4f7e8ab2c1ce22
+                    @if ( $item == 1 )
+                        <div class="carousel-item active">
+                            <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
+                        </div>
+                    @else
+                    
+                    <div class="carousel-item">
                         <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
                     </div>
-                @else
-                
-                <div class="carousel-item">
-                    <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
-                </div>
 
-                @endif
+                    @endif
                 @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -34,8 +29,8 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div> --}}
-    <div class="jurusan-building">
+    </div>
+    {{-- <div class="jurusan-building">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -62,7 +57,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </div> --}}
     <div id="stravisco-singlekelas">
         <div class="container">
             <div class="row">
@@ -98,11 +93,15 @@
                     <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                         <img src="{{ Storage::url($item->photo) }}"
                             class="img-fluid {{ $filter == 'individu' ? 'modalIndividu' : 'modalLain' }}"
-                            data-name="{{ $item->student_name }}" data-quotes="{{ $item->quotes }}"
+                            data-name="{{ $item->student_name }}" data-quotes="{{ $item->quotes == 'Dummy' ?  'No Quote' : $item->quotes }}" data-
                             alt="foto {{ $item->student_name }}">
                         @if ( $filter == 'individu' ) 
                         <h1 class="student-name">{{ $item->student_name }}</h1>
-                        <p class="quotes-student" data-fullquote="{{ $item->quotes }}">"{{ $item->quotes }}"</p>
+                        @if ( $item->quotes == 'Dummy' )
+                            <p class="quotes-student" data-fullquote="No Quote">"No Quote"</p>
+                        @else
+                            <p class="quotes-student" data-fullquote="{{ $item->quotes }}">"{{ $item->quotes }}"</p>
+                        @endif
                         @endif
                     </div>
                 @endforeach

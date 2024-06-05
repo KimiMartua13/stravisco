@@ -41,13 +41,13 @@
                 @foreach ( $guru as $key => $item )
                     @if ( $key <= 5 )
                         <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <img src="{{ Storage::url($item->photo) }}" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
+                            <img src="{{ Storage::url($item->photo) }}" class="img-fluid potrait" data-name="{{ $item->teacher_name }}" data-position="{{ $item->teacher_description }}" alt="">
                             <h1> {{ $item->teacher_name }} </h1>
                             <p> {{ $item->teacher_description }} SMKN 2 Kota Bekasi</p>
                         </div>
                     @else
                         <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
-                            <img src="{{ Storage::url($item->photo) }}" class="img-fluid potrait" data-name="Ramdani S.Kom" data-position="Kepala Program Keahlian" alt="">
+                            <img src="{{ Storage::url($item->photo) }}" class="img-fluid potrait" data-name="{{ $item->teacher_name }}" data-position="Wali Kelas {{ $item->teacher_description }}" alt="">
                             <h1> {{ $item->teacher_name }} </h1>
                             <p> Wali Kelas {{ $item->teacher_description }} </p>
                         </div>
