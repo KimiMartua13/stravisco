@@ -2,7 +2,7 @@
 
 @section('main')
     <section class="hero">
-        <img src="/img/siang1.jpg" alt="Moment" class="img-fluid landscape">
+        <img src="/img/siang1.JPG" alt="Moment" class="img-fluid landscape">
     </section>
 
     <div class="stravisco-area section-padding-100">
