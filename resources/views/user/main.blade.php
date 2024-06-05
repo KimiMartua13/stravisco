@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/img/stravisco.png" type="image/x-icon">
     <title>Stravisco | Home</title>
     @include('user/assets/header')
 
@@ -14,6 +15,8 @@
     @include('user/partials/navbar')
 
     @yield('main')
+
+    <a href="#" class="btn back-to-top"><i class="bi bi-arrow-up-short"></i></a>
 
     @include('user/assets/footer')
 

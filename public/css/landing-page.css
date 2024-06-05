@@ -389,7 +389,7 @@ a {
 }
 
 #information-card h2 {
-    line-height: 0;
+    margin-bottom: -10px;
 }
 
 #information-card .col-lg-12 p {
@@ -441,37 +441,35 @@ a {
     font-size: 18px;
 }
 
-/* Opsi 2 */
-
-/* .stravisco-quotes-foryou .quotes-title h2 {
-    text-align: center;
-    font-size: 50px;
-}
-
-.quotes-for-you img {
-    width: 300px;
-    border-radius: 10px 30px 10px 30px;
-    -webkit-border-radius: 10px 30px 10px 30px;
-    -moz-border-radius: 10px 30px 10px 30px;
-    -ms-border-radius: 10px 30px 10px 30px;
-    -o-border-radius: 10px 30px 10px 30px;
-    border: 1px solid #000;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.075) !important;
-    margin-top: 20px;
-}
-
-.quotes-for-you h1 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #000;
-} */
-
 .waves-up {
     margin-bottom: -2px;
 }
 
 .waves-down {
     margin-top: -2px;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 8px 0;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9;
+    background-color: #000;
+}
+
+.back-to-top i {
+    color: #fff;
+}
+
+.back-to-top:hover {
+    background-color: #333232;
 }
 
 /* Animation */
@@ -645,6 +643,12 @@ a {
     }
 }
 
+@media screen and (max-width: 510px) {
+    #information-card .col-lg-12 p {
+        margin: auto 30px;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .stravisco-item .stravisco-text h2 {
         font-size: 25px;
@@ -663,12 +667,6 @@ a {
 @media screen and (max-width: 426px) {
     .change-parent-btn button {
         font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 426px) {
-    .change-parent-btn button {
-        font-size: 12px;
     }
 }
 

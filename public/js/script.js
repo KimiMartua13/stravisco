@@ -12,6 +12,15 @@ $(document).ready(function () {
         }
     });
 
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    
     // Random images
     const images = [
         "/img/siang1.JPG",

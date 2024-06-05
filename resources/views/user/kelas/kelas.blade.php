@@ -6,7 +6,7 @@
             <div class="carousel-inner">
                 @foreach ($fotoKumpulanKelas as $item)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }} ">
-                        <img src="{{ Storage::url($item->photo) }}" class="d-block w-100" height="500px" alt="Thumbnail kelas">
+                        <img src="{{ Storage::url($item->photo) }}" class="d-block w-100 img-fluid landscape" height="500px" alt="Thumbnail kelas">
                     </div>
                 @endforeach
             </div>
