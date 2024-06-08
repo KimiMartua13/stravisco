@@ -219,6 +219,9 @@ $(document).ready(function () {
             }
             isZoomed = !isZoomed;
         });
+        $(".tutup").click(function () {
+            $("#gambarModalPotrait").fadeOut();
+        });
 
         // Landscape
         $(".landscape").click(function () {
@@ -258,6 +261,9 @@ $(document).ready(function () {
                 $(this).css("cursor", "zoom-out");
             }
             isZoomed = !isZoomed;
+        });
+        $(".tutup").click(function () {
+            $("#gambarModalLandscape").fadeOut();
         });
     }
     $(".potrait").click(function () {

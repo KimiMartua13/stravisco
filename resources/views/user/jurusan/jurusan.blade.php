@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col">
                     <div class="jurusan-title mt-80">
-                        <h1 class="text-center">Jurusan</h1>
+                        <h1 class="text-center">Major's</h1>
                     </div>
                 </div>
             </div>

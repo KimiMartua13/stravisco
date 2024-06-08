@@ -5,13 +5,16 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/img/gedung-tei.jpg" class="d-block w-100 img-fluid landscape" alt="Gedung jurusan">
+                    <img src="/img/guru-1.jpg" class="d-block w-100 img-fluid landscape" alt="Teacher's photos">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/gedung-tkj.jpg" class="d-block w-100 img-fluid landscape" alt="Gedung jurusan">
+                    <img src="/img/guru-2.jpg" class="d-block w-100 img-fluid landscape" alt="Teacher's photos">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/gedung-tsm.jpg" class="d-block w-100 img-fluid landscape" alt="Gedung jurusan">
+                    <img src="/img/guru-3.jpg" class="d-block w-100 img-fluid landscape" alt="Teacher's photos">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/guru-4.jpg" class="d-block w-100 img-fluid landscape" alt="Teacher's photos">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"

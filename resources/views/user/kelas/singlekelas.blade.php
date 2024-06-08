@@ -7,12 +7,12 @@
                 @foreach ($kelas->ambilFotoKelas() as $item => $value)
                     @if ( $item == 1 )
                         <div class="carousel-item active">
-                            <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
+                            <img src="{{ Storage::url($value->photo) }}" class="d-block w-100 landscape" alt="Gedung kelas">
                         </div>
                     @else
                     
                     <div class="carousel-item">
-                        <img src="{{ Storage::url($value->photo) }}" class="d-block w-100" alt="Gedung kelas">
+                        <img src="{{ Storage::url($value->photo) }}" class="d-block w-100 landscape" alt="Gedung kelas">
                     </div>
 
                     @endif
